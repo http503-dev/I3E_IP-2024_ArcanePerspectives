@@ -1,20 +1,35 @@
+/*
+ * Author: Muhammad Farhan
+ * Date: 15/7/24
+ * Description: Script for non-euclidean/forced perspective scaling mechanic
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Superliminal : MonoBehaviour
 {
+    /// <summary>
+    /// to reference target object
+    /// </summary>
     [Header("Components")]
     public Transform target;
 
+    /// <summary>
+    /// Parameters for scaling mechanic
+    /// </summary>
     [Header("Parameter")]
-    public LayerMask targetMask;
-    public LayerMask ignoreTargetMask;
-    public float offsetFactor;
+    public LayerMask targetMask;   // The layer mask used to hit only potential targets with a raycast
+    public LayerMask ignoreTargetMask;   // The layer mask used to ignore the player and target objects while raycasting
+    public float offsetFactor;   // The offset amount for positioning the object so it doesn't clip into walls
 
-    float originalDistance;
-    float originalScale;
-    Vector3 targetScale;
+
+    /// <summary>
+    /// scaling and distance info
+    /// </summary>
+    float originalDistance;   // The original distance between the player camera and the target
+    float originalScale;   // The original scale of the target objects prior to being resized
+    Vector3 targetScale;   // The scale we want our object to be set to each frame
 
 
     // Start is called before the first frame update
@@ -38,13 +53,13 @@ public class Superliminal : MonoBehaviour
             if (target ==  null)
             {
                 RaycastHit hit;
-                if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity, targetMask))
+                if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity, targetMask))   // Fire a raycast with the layer mask that only hits potential targets
                 {
                     target = hit.transform;
                     target.GetComponent<Rigidbody>().isKinematic = true;
-                    originalDistance = Vector3.Distance(transform.position, target.position);
-                    originalScale = target.localScale.x;
-                    targetScale = target.localScale;
+                    originalDistance = Vector3.Distance(transform.position, target.position);   // Calculate the distance between the camera and the object
+                    originalScale = target.localScale.x;   // Save the original scale of the object
+                    targetScale = target.localScale;   // Set target scale to be the same as the original
                 }
             }
 
@@ -63,16 +78,16 @@ public class Superliminal : MonoBehaviour
             return;
         }
 
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity, ignoreTargetMask))
+        RaycastHit hit;   // Cast a ray forward from the camera position 
+        if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity, ignoreTargetMask))   // ignore the layer that is used to acquire targets so we don't hit the attached target with our ray
         {
-            target.position = hit.point - transform.forward * offsetFactor * targetScale.x;
+            target.position = hit.point - transform.forward * offsetFactor * targetScale.x;   // Set the new position of the target by getting the hit point and moving it back a bit depending on the scale and offset factor
 
-            float currentDistance = Vector3.Distance(transform.position, target.position);
-            float s = currentDistance / originalDistance;
-            targetScale.x = targetScale.y = targetScale.z = s;
+            float currentDistance = Vector3.Distance(transform.position, target.position);   // Calculate the current distance between the camera and the target object
+            float s = currentDistance / originalDistance;   // Calculate the ratio between the current distance and the original distance
+            targetScale.x = targetScale.y = targetScale.z = s;    // Set the scale Vector3 variable to be the ratio of the distances
 
-            target.transform.localScale = targetScale * originalScale;
+            target.transform.localScale = targetScale * originalScale;   // Set the scale for the target objectm, multiplied by the original scale
         }
     }
 }
