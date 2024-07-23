@@ -31,12 +31,17 @@ public class Superliminal : MonoBehaviour
     float originalScale;   // The original scale of the target objects prior to being resized
     Vector3 targetScale;   // The scale we want our object to be set to each frame
 
+    private Rigidbody targetRigidbody;
+
+    private GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
+        player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
@@ -56,7 +61,11 @@ public class Superliminal : MonoBehaviour
                 if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity, targetMask))   // Fire a raycast with the layer mask that only hits potential targets
                 {
                     target = hit.transform;
-                    target.GetComponent<Rigidbody>().isKinematic = true;
+                    targetRigidbody = target.GetComponent<Rigidbody>();
+                    if (targetRigidbody != null)
+                    {
+                        target.GetComponent<Rigidbody>().isKinematic = true;
+                    }
                     originalDistance = Vector3.Distance(transform.position, target.position);   // Calculate the distance between the camera and the object
                     originalScale = target.localScale.x;   // Save the original scale of the object
                     targetScale = target.localScale;   // Set target scale to be the same as the original
@@ -65,7 +74,10 @@ public class Superliminal : MonoBehaviour
 
             else
             {
-                target.GetComponent<Rigidbody>().isKinematic = false;
+                if (targetRigidbody != null)
+                {
+                    targetRigidbody.isKinematic = false;
+                }
                 target = null;
             }
         }
@@ -78,6 +90,10 @@ public class Superliminal : MonoBehaviour
             return;
         }
 
+        // Temporarily disable player collider
+        Collider playerCollider = player.GetComponent<Collider>();
+        playerCollider.enabled = false;
+
         RaycastHit hit;   // Cast a ray forward from the camera position 
         if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity, ignoreTargetMask))   // ignore the layer that is used to acquire targets so we don't hit the attached target with our ray
         {
@@ -89,5 +105,8 @@ public class Superliminal : MonoBehaviour
 
             target.transform.localScale = targetScale * originalScale;   // Set the scale for the target objectm, multiplied by the original scale
         }
+
+        // Re-enable player collider
+        playerCollider.enabled = true;
     }
 }
