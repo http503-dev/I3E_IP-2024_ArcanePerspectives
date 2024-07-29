@@ -171,4 +171,15 @@ public class GameManager : MonoBehaviour
         repText.text += reputation;
         Debug.Log("Reputation increased by " + amount + ". Total reputation: " + reputation);
     }
+
+    /// <summary>
+    /// function to reduce reputation
+    /// </summary>
+    /// <param name="amount"></param>
+    public void ReduceReputation(int amount)
+    {
+        reputation -= amount;
+        repText.text = "Reputation: " + reputation; // Update text properly
+        Debug.Log("Reputation decreased by " + amount + ". Total reputation: " + reputation);
+    }
 }

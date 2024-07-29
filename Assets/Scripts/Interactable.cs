@@ -34,5 +34,6 @@ public class Interactable : MonoBehaviour
     public virtual void Interact(Player thePlayer)
     {
         Debug.Log(gameObject.name + " was interacted with");
+        thePlayer.PickUpObject(transform); // Call the PickUpObject method when interacting
     }
 }

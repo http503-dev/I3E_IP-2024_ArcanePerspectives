@@ -14,6 +14,11 @@ public class Player : MonoBehaviour
     /// </summary>
     Interactable currentInteractable;
 
+    /// <summary>
+    /// reference to currently held object
+    /// </summary>
+    private Transform heldObject;
+
 
     /// <summary>
     /// to access player camera's transform position
@@ -24,6 +29,11 @@ public class Player : MonoBehaviour
     /// to set intearaction distance
     /// </summary>
     [SerializeField] float interactionDistance;
+
+    /// <summary>
+    /// throwing force
+    /// </summary>
+    [SerializeField] float throwForce = 20f;
 
     /// <summary>
     /// using raycast to detect interactable
@@ -85,6 +95,33 @@ public class Player : MonoBehaviour
         if (currentInteractable != null)
         {
             currentInteractable.Interact(this);
+        }
+    }
+
+    /// <summary>
+    /// for picking up objects
+    /// </summary>
+    /// <param name="objectToHold"></param>
+    public void PickUpObject(Transform objectToHold)
+    {
+        heldObject = objectToHold;
+        objectToHold.GetComponent<Rigidbody>().isKinematic = true;
+        objectToHold.position = playerCamera.position + playerCamera.forward * interactionDistance / 2;
+        objectToHold.parent = playerCamera;
+    }
+
+    /// <summary>
+    /// for throwing objects
+    /// </summary>
+    void OnThrow()
+    {
+        if (heldObject != null)
+        {
+            Rigidbody rb = heldObject.GetComponent<Rigidbody>();
+            rb.isKinematic = false;
+            rb.velocity = playerCamera.forward * throwForce;
+            heldObject.parent = null;
+            heldObject = null;
         }
     }
 }
