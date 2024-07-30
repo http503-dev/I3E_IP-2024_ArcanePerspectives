@@ -1,0 +1,987 @@
+; FBX 6.1.0 project file
+; ----------------------------------------------------
+
+FBXHeaderExtension:  {
+	FBXHeaderVersion: 1003
+	FBXVersion: 6100
+	CurrentCameraResolution:  {
+		CameraName: "Producer Perspective"
+		CameraResolutionMode: "Fixed Resolution"
+		CameraResolutionW: 960
+		CameraResolutionH: 540
+	}
+	CreationTimeStamp:  {
+		Version: 1000
+		Year: 2024
+		Month: 7
+		Day: 30
+		Hour: 12
+		Minute: 4
+		Second: 3
+		Millisecond: 0
+	}
+	Creator: "FBX SDK/FBX Plugins version 2020.3.2"
+}
+
+; Document Description
+;------------------------------------------------------------------
+
+Document:  {
+	Name: ""
+}
+
+; Document References
+;------------------------------------------------------------------
+
+References:  {
+}
+
+; Object definitions
+;------------------------------------------------------------------
+
+Definitions:  {
+	Version: 100
+	Count: 18
+	ObjectType: "Model" {
+		Count: 1
+	}
+	ObjectType: "Material" {
+		Count: 1
+	}
+	ObjectType: "Texture" {
+		Count: 6
+	}
+	ObjectType: "Video" {
+		Count: 6
+	}
+	ObjectType: "SceneInfo" {
+		Count: 1
+	}
+	ObjectType: "GlobalSettings" {
+		Count: 1
+	}
+	ObjectType: "Implementation" {
+		Count: 1
+	}
+	ObjectType: "BindingTable" {
+		Count: 1
+	}
+}
+
+; Object properties
+;------------------------------------------------------------------
+
+Objects:  {
+	Model: "Model::pPlane56", "Mesh" {
+		Version: 232
+		Properties60:  {
+			Property: "QuaternionInterpolate", "enum", "",0
+			Property: "RotationOffset", "Vector3D", "",-1.54946966488135e-12,-834.191005381528,834.19100538153
+			Property: "RotationPivot", "Vector3D", "",-834.191005381528,2.77841418332934e-13,-834.19100538153
+			Property: "ScalingOffset", "Vector3D", "",-833.691005381528,2.7767488487924e-13,-833.69100538153
+			Property: "ScalingPivot", "Vector3D", "",-0.5,1.66533453693773e-16,-0.500000000000001
+			Property: "TranslationActive", "bool", "",0
+			Property: "TranslationMin", "Vector3D", "",0,0,0
+			Property: "TranslationMax", "Vector3D", "",0,0,0
+			Property: "TranslationMinX", "bool", "",0
+			Property: "TranslationMinY", "bool", "",0
+			Property: "TranslationMinZ", "bool", "",0
+			Property: "TranslationMaxX", "bool", "",0
+			Property: "TranslationMaxY", "bool", "",0
+			Property: "TranslationMaxZ", "bool", "",0
+			Property: "RotationOrder", "enum", "",0
+			Property: "RotationSpaceForLimitOnly", "bool", "",0
+			Property: "RotationStiffnessX", "double", "",0
+			Property: "RotationStiffnessY", "double", "",0
+			Property: "RotationStiffnessZ", "double", "",0
+			Property: "AxisLen", "double", "",10
+			Property: "PreRotation", "Vector3D", "",0,0,0
+			Property: "PostRotation", "Vector3D", "",0,0,0
+			Property: "RotationActive", "bool", "",1
+			Property: "RotationMin", "Vector3D", "",0,0,0
+			Property: "RotationMax", "Vector3D", "",0,0,0
+			Property: "RotationMinX", "bool", "",0
+			Property: "RotationMinY", "bool", "",0
+			Property: "RotationMinZ", "bool", "",0
+			Property: "RotationMaxX", "bool", "",0
+			Property: "RotationMaxY", "bool", "",0
+			Property: "RotationMaxZ", "bool", "",0
+			Property: "InheritType", "enum", "",1
+			Property: "ScalingActive", "bool", "",0
+			Property: "ScalingMin", "Vector3D", "",0,0,0
+			Property: "ScalingMax", "Vector3D", "",0,0,0
+			Property: "ScalingMinX", "bool", "",0
+			Property: "ScalingMinY", "bool", "",0
+			Property: "ScalingMinZ", "bool", "",0
+			Property: "ScalingMaxX", "bool", "",0
+			Property: "ScalingMaxY", "bool", "",0
+			Property: "ScalingMaxZ", "bool", "",0
+			Property: "GeometricTranslation", "Vector3D", "",0,0,0
+			Property: "GeometricRotation", "Vector3D", "",0,0,0
+			Property: "GeometricScaling", "Vector3D", "",1,1,1
+			Property: "MinDampRangeX", "double", "",0
+			Property: "MinDampRangeY", "double", "",0
+			Property: "MinDampRangeZ", "double", "",0
+			Property: "MaxDampRangeX", "double", "",0
+			Property: "MaxDampRangeY", "double", "",0
+			Property: "MaxDampRangeZ", "double", "",0
+			Property: "MinDampStrengthX", "double", "",0
+			Property: "MinDampStrengthY", "double", "",0
+			Property: "MinDampStrengthZ", "double", "",0
+			Property: "MaxDampStrengthX", "double", "",0
+			Property: "MaxDampStrengthY", "double", "",0
+			Property: "MaxDampStrengthZ", "double", "",0
+			Property: "PreferedAngleX", "double", "",0
+			Property: "PreferedAngleY", "double", "",0
+			Property: "PreferedAngleZ", "double", "",0
+			Property: "LookAtProperty", "object", ""
+			Property: "UpVectorProperty", "object", ""
+			Property: "Show", "bool", "",1
+			Property: "NegativePercentShapeSupport", "bool", "",1
+			Property: "DefaultAttributeIndex", "int", "",0
+			Property: "Freeze", "bool", "",0
+			Property: "LODBox", "bool", "",0
+			Property: "Lcl Translation", "Lcl Translation", "A",-1945.29190477472,835.483747037831,2394.65366824976
+			Property: "Lcl Rotation", "Lcl Rotation", "A",180,0,90
+			Property: "Lcl Scaling", "Lcl Scaling", "A",1331.97769228604,1668.38201076306,1317.59562163552
+			Property: "Visibility", "Visibility", "A",1
+			Property: "currentUVSet", "KString", "U", "map1"
+			Property: "Color", "ColorRGB", "N",0.8,0.8,0.8
+			Property: "BBoxMin", "Vector3D", "N",0,0,0
+			Property: "BBoxMax", "Vector3D", "N",0,0,0
+			Property: "Primary Visibility", "bool", "N",1
+			Property: "Casts Shadows", "bool", "N",1
+			Property: "Receive Shadows", "bool", "N",1
+			Property: "MayaNormalThreshold", "double", "N",30
+		}
+		MultiLayer: 0
+		MultiTake: 0
+		Shading: T
+		Culling: "CullingOff"
+		Vertices: -0.499999910593033,0,0.325813412666321,-0.399999886751175,0,0.325813412666321,-0.299999892711639,0,0.325813412666321
+        ,-0.199999868869781,0,0.325813412666321,-0.099999874830246,0,0.325813412666321,5.96046447753906e-08,0,0.325813412666321
+        ,0.100000143051147,0,0.325813412666321,0.200000107288361,0,0.325813412666321,0.300000071525574,0,0.325813412666321
+        ,0.400000095367432,0,0.325813412666321,0.497635245323181,0,0.325813412666321,-0.499999910593033,0,-0.100000023841858
+        ,-0.399999886751175,0,-0.100000023841858,-0.299999892711639,0,-0.100000023841858,-0.199999868869781,0,-0.100000023841858
+        ,-0.099999874830246,0,-0.100000023841858,5.96046447753906e-08,0,-0.100000023841858,0.100000143051147,0,-0.100000023841858
+        ,0.200000107288361,0,-0.100000023841858,0.300000071525574,0,-0.100000023841858,0.400000095367432,0,-0.100000023841858
+        ,0.497635245323181,0,-0.100000023841858,-0.499999910593033,0,-0.200000047683716,-0.399999886751175,0,-0.200000047683716
+        ,-0.299999892711639,0,-0.200000047683716,-0.199999868869781,0,-0.200000047683716,-0.099999874830246,0,-0.200000047683716
+        ,5.96046447753906e-08,0,-0.200000047683716,0.100000143051147,0,-0.200000047683716,0.200000107288361,0,-0.200000047683716
+        ,0.300000071525574,0,-0.200000047683716,0.400000095367432,0,-0.200000047683716,0.497635245323181,0,-0.200000047683716
+        ,-0.499999910593033,0,-0.299999952316284,-0.399999886751175,0,-0.299999952316284,-0.299999892711639,0,-0.299999952316284
+        ,-0.199999868869781,0,-0.299999952316284,-0.099999874830246,0,-0.299999952316284,5.96046447753906e-08,0,-0.299999952316284
+        ,0.100000143051147,0,-0.299999952316284,0.200000107288361,0,-0.299999952316284,0.300000071525574,0,-0.299999952316284
+        ,0.400000095367432,0,-0.299999952316284,0.497635245323181,0,-0.299999952316284,-0.499999910593033,0,-0.399999976158142
+        ,-0.399999886751175,0,-0.399999976158142,-0.299999892711639,0,-0.399999976158142,-0.199999868869781,0,-0.399999976158142
+        ,-0.099999874830246,0,-0.399999976158142,5.96046447753906e-08,0,-0.399999976158142,0.100000143051147,0,-0.399999976158142
+        ,0.200000107288361,0,-0.399999976158142,0.300000071525574,0,-0.399999976158142,0.400000095367432,0,-0.399999976158142
+        ,0.497635245323181,0,-0.399999976158142,-0.499999910593033,0,-0.5,-0.399999886751175,0,-0.5,-0.299999892711639,0,-0.5
+        ,-0.199999868869781,0,-0.5,-0.099999874830246,0,-0.5,5.96046447753906e-08,0,-0.5,0.100000143051147,0,-0.5,0.200000107288361
+        ,0,-0.5,0.300000071525574,0,-0.5,0.400000095367432,0,-0.5,0.497635245323181,0,-0.5,-0.499999910593033,0,0.219359993934631
+        ,-0.399999886751175,0,0.219359993934631,-0.299999892711639,0,0.219359993934631,-0.199999868869781,0,0.219359993934631
+        ,-0.099999874830246,0,0.219359993934631,5.96046447753906e-08,0,0.219359993934631,0.100000143051147,0,0.219359993934631
+        ,0.200000107288361,0,0.219359993934631,0.300000071525574,0,0.219359993934631,0.400000095367432,0,0.219359993934631
+        ,0.497635245323181,0,0.219359993934631,-0.499999910593033,0,0.112906813621521,-0.399999886751175,0,0.112906813621521
+        ,-0.299999892711639,0,0.112906813621521,-0.199999868869781,0,0.112906813621521,-0.099999874830246,0,0.112906813621521
+        ,5.96046447753906e-08,0,0.112906813621521,0.100000143051147,0,0.112906813621521,0.200000107288361,0,0.112906813621521
+        ,0.300000071525574,0,0.112906813621521,0.400000095367432,0,0.112906813621521,0.497635245323181,0,0.112906813621521
+        ,-0.499999910593033,0,0.00645339488983154,-0.399999886751175,0,0.00645339488983154,-0.299999892711639,0,0.00645339488983154
+        ,-0.199999868869781,0,0.00645339488983154,-0.099999874830246,0,0.00645339488983154,5.96046447753906e-08,0,0.00645339488983154
+        ,0.100000143051147,0,0.00645339488983154,0.200000107288361,0,0.00645339488983154,0.300000071525574,0,0.00645339488983154
+        ,0.400000095367432,0,0.00645339488983154,0.497635245323181,0,0.00645339488983154
+		PolygonVertexIndex: 88,89,12,-12,89,90,13,-13,90,91,14,-14,91,92,15,-15,92,93,16,-16,93,94,17,-17,94,95,18,-18,95,96,19,-19,96,97,20,-20
+        ,97,98,21,-21,11,12,23,-23,12,13,24,-24,13,14,25,-25,14,15,26,-26,15,16,27,-27,16,17,28,-28,17,18,29,-29,18,19,30
+        ,-30,19,20,31,-31,20,21,32,-32,22,23,34,-34,23,24,35,-35,24,25,36,-36,25,26,37,-37,26,27,38,-38,27,28,39,-39,28,29
+        ,40,-40,29,30,41,-41,30,31,42,-42,31,32,43,-43,33,34,45,-45,34,35,46,-46,35,36,47,-47,36,37,48,-48,37,38,49,-49,38
+        ,39,50,-50,39,40,51,-51,40,41,52,-52,41,42,53,-53,42,43,54,-54,44,45,56,-56,45,46,57,-57,46,47,58,-58,47,48,59,-59
+        ,48,49,60,-60,49,50,61,-61,50,51,62,-62,51,52,63,-63,52,53,64,-64,53,54,65,-65,0,1,67,-67,1,2,68,-68,2,3,69,-69,3
+        ,4,70,-70,4,5,71,-71,5,6,72,-72,6,7,73,-73,7,8,74,-74,8,9,75,-75,9,10,76,-76,66,67,78,-78,67,68,79,-79,68,69,80,-80
+        ,69,70,81,-81,70,71,82,-82,71,72,83,-83,72,73,84,-84,73,74,85,-85,74,75,86,-86,75,76,87,-87,77,78,89,-89,78,79,90
+        ,-90,79,80,91,-91,80,81,92,-92,81,82,93,-93,82,83,94,-94,83,84,95,-95,84,85,96,-96,85,86,97,-97,86,87,98,-98
+		Edges: 200,203,204,201,208,205,212,209,216,213,220,217,224,221,228,225,232,229,236,233,237,2,43,6,41,10,45,14,49,18,53,22
+        ,57,26,61,30,65,34,69,38,73,77,42,83,46,81,50,85,54,89,58,93,62,97,66,101,70,105,74,109,78,113,117,82,123,86,121,90
+        ,125,94,129,98,133,102,137,106,141,110,145,114,149,118,153,157,122,163,126,161,130,165,134,169,138,173,142,177,146
+        ,181,150,185,154,189,158,193,197,162,166,170,174,178,182,186,190,194,198,243,241,245,249,253,257,261,265,269,273,277
+        ,202,206,210,214,218,222,226,230,234,238,283,281,285,289,293,297,301,305,309,313,317,242,246,250,254,258,262,266,270
+        ,274,278,3,1,5,9,13,17,21,25,29,33,37,0,4,8,12,16,20,24,28,32,36
+		GeometryVersion: 124
+		LayerElementNormal: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "ByVertice"
+			ReferenceInformationType: "Direct"
+			Normals: 0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0
+             ,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0
+             ,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0
+             ,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0
+             ,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0
+             ,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0
+		}
+		LayerElementUV: 0 {
+			Version: 101
+			Name: "map1"
+			MappingInformationType: "ByPolygonVertex"
+			ReferenceInformationType: "IndexToDirect"
+			UV: 0.558581590652466,0.0375669114291668,0.558572590351105,0.132396012544632,0.45871376991272,0.132386520504951,0.458722800016403
+             ,0.0375574082136154,0.558563530445099,0.227225065231323,0.458704739809036,0.227215558290482,0.558554530143738
+             ,0.322054177522659,0.458695709705353,0.322044670581818,0.558545470237732,0.416883230209351,0.458686679601669
+             ,0.416873723268509,0.558536410331726,0.511712193489075,0.458677649497986,0.511702716350555,0.558527410030365
+             ,0.606541395187378,0.458668619394302,0.606531918048859,0.558518350124359,0.701370418071747,0.458659619092941
+             ,0.701360940933228,0.558509349822998,0.796199440956116,0.458650559186935,0.796189963817596,0.558500349521637
+             ,0.891028523445129,0.458641529083252,0.89101904630661,0.558491468429565,0.983615040779114,0.458632737398148,0.983605563640594
+             ,0.364908576011658,0.132377564907074,0.364917606115341,0.0375484600663185,0.364899575710297,0.227206617593765
+             ,0.364890545606613,0.322035729885101,0.36488151550293,0.416864812374115,0.364872455596924,0.511693775653839,0.364863455295563
+             ,0.606522917747498,0.364854425191879,0.701352000236511,0.364845395088196,0.79618102312088,0.364836394786835,0.891010105609894
+             ,0.364827543497086,0.983596622943878,0.271103531122208,0.132368639111519,0.271112531423569,0.0375395342707634
+             ,0.271094501018524,0.22719769179821,0.271085470914841,0.322026789188385,0.27107647061348,0.416855841875076,0.271067410707474
+             ,0.511684834957123,0.27105838060379,0.606513977050781,0.271049380302429,0.701343059539795,0.271040350198746,0.796172082424164
+             ,0.27103129029274,0.891001164913177,0.271022498607635,0.983587682247162,0.177298337221146,0.132359698414803,0.177307397127151
+             ,0.0375306159257889,0.177289322018623,0.227188766002655,0.17728029191494,0.322017848491669,0.177271276712418
+             ,0.416846930980682,0.177262246608734,0.511675953865051,0.177253231406212,0.60650509595871,0.177244186401367,0.701334118843079
+             ,0.177235156297684,0.796163201332092,0.177226141095161,0.890992283821106,0.177217334508896,0.98357880115509,0.0834931880235672
+             ,0.132350772619247,0.0835022106766701,0.0375217013061047,0.0834841653704643,0.227179855108261,0.0834751203656197
+             ,0.322008937597275,0.0834660977125168,0.416838020086288,0.0834570676088333,0.511667013168335,0.0834480226039886
+             ,0.606496155261993,0.0834389999508858,0.701325178146362,0.0834299772977829,0.796154201030731,0.0834209620952606
+             ,0.89098334312439,0.0834121555089951,0.983569860458374,0.858157753944397,0.0375954210758209,0.858148694038391
+             ,0.132424533367157,0.758289933204651,0.132415026426315,0.758298933506012,0.0375859141349792,0.85813969373703
+             ,0.227253571152687,0.758280873298645,0.227244064211845,0.858130633831024,0.322082698345184,0.758271872997284
+             ,0.32207316160202,0.858121573925018,0.416911751031876,0.758262813091278,0.416902244091034,0.858112573623657,0.511740744113922
+             ,0.758253753185272,0.511731266975403,0.858103573322296,0.606569886207581,0.758244752883911,0.606560409069061
+             ,0.85809451341629,0.701398968696594,0.75823575258255,0.70138943195343,0.858085513114929,0.796227991580963,0.758226692676544
+             ,0.796218454837799,0.858076512813568,0.891057074069977,0.758217692375183,0.891047537326813,0.858067631721497
+             ,0.983643591403961,0.758208870887756,0.983633995056152,0.658431351184845,0.132405519485474,0.658440411090851
+             ,0.0375764183700085,0.658422350883484,0.227234572172165,0.658413290977478,0.322063684463501,0.658404231071472
+             ,0.416892737150192,0.658395230770111,0.511721730232239,0.658386170864105,0.606550931930542,0.658377170562744
+             ,0.701379954814911,0.658368170261383,0.79620897769928,0.658359110355377,0.891038060188293,0.65835028886795,0.983624577522278
+             
+			UVIndex: 0,1,2,3,1,4,5,2,4,6,7,5,6,8,9,7,8,10,11,9,10,12,13,11,12,14,15,13,14,16,17,15,16,18,19,17,18,20,21,19,3,2,22
+             ,23,2,5,24,22,5,7,25,24,7,9,26,25,9,11,27,26,11,13,28,27,13,15,29,28,15,17,30,29,17,19,31,30,19,21,32,31,23,22
+             ,33,34,22,24,35,33,24,25,36,35,25,26,37,36,26,27,38,37,27,28,39,38,28,29,40,39,29,30,41,40,30,31,42,41,31,32
+             ,43,42,34,33,44,45,33,35,46,44,35,36,47,46,36,37,48,47,37,38,49,48,38,39,50,49,39,40,51,50,40,41,52,51,41,42
+             ,53,52,42,43,54,53,45,44,55,56,44,46,57,55,46,47,58,57,47,48,59,58,48,49,60,59,49,50,61,60,50,51,62,61,51,52
+             ,63,62,52,53,64,63,53,54,65,64,66,67,68,69,67,70,71,68,70,72,73,71,72,74,75,73,74,76,77,75,76,78,79,77,78,80
+             ,81,79,80,82,83,81,82,84,85,83,84,86,87,85,69,68,88,89,68,71,90,88,71,73,91,90,73,75,92,91,75,77,93,92,77,79
+             ,94,93,79,81,95,94,81,83,96,95,83,85,97,96,85,87,98,97,89,88,1,0,88,90,4,1,90,91,6,4,91,92,8,6,92,93,10,8,93
+             ,94,12,10,94,95,14,12,95,96,16,14,96,97,18,16,97,98,20,18
+		}
+		LayerElementMaterial: 0 {
+			Version: 101
+			Name: ""
+			MappingInformationType: "AllSame"
+			ReferenceInformationType: "IndexToDirect"
+			Materials: 0
+		}
+		Layer: 0 {
+			Version: 100
+			LayerElement:  {
+				Type: "LayerElementNormal"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementMaterial"
+				TypedIndex: 0
+			}
+			LayerElement:  {
+				Type: "LayerElementUV"
+				TypedIndex: 0
+			}
+		}
+		NodeAttributeName: "Geometry::pPlane56_ncl1_1"
+	}
+	SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
+		Type: "UserData"
+		Version: 100
+		MetaData:  {
+			Version: 100
+			Title: ""
+			Subject: ""
+			Author: ""
+			Keywords: ""
+			Revision: ""
+			Comment: ""
+		}
+		Properties60:  {
+			Property: "DocumentUrl", "KString", "", "/Users/johnathanzwang/Desktop/School sem 2/3D for Real-Time/maya files/3RT/scenes/CastleWallPlain.fbx"
+             
+			Property: "SrcDocumentUrl", "KString", "", "/Users/johnathanzwang/Desktop/School sem 2/3D for Real-Time/maya files/3RT/scenes/CastleWallPlain.fbx"
+             
+			Property: "Original", "Compound", ""
+			Property: "Original|ApplicationVendor", "KString", "", "Autodesk"
+			Property: "Original|ApplicationName", "KString", "", "Maya"
+			Property: "Original|ApplicationVersion", "KString", "", "2024"
+			Property: "Original|DateTime_GMT", "DateTime", "", "30/07/2024 12:04:03.000"
+			Property: "Original|FileName", "KString", "", "/Users/johnathanzwang/Desktop/School sem 2/3D for Real-Time/maya files/3RT/scenes/CastleWallPlain.fbx"
+             
+			Property: "LastSaved", "Compound", ""
+			Property: "LastSaved|ApplicationVendor", "KString", "", "Autodesk"
+			Property: "LastSaved|ApplicationName", "KString", "", "Maya"
+			Property: "LastSaved|ApplicationVersion", "KString", "", "2024"
+			Property: "LastSaved|DateTime_GMT", "DateTime", "", "30/07/2024 12:04:03.000"
+			Property: "Original|ApplicationActiveProject", "KString", "", "/Users/johnathanzwang/Desktop/School sem 2/3D for Real-Time/maya files/3RT/scenes"
+             
+			Property: "Original|ApplicationNativeFile", "KString", "", "/Users/johnathanzwang/Desktop/School sem 2/3D for Real-Time/maya files/3RT/scenes/IP 3RT.mb"
+             
+		}
+	}
+	Material: "Material::aiStandardSurface1", "" {
+		Version: 102
+		ShadingModel: "unknown"
+		MultiLayer: 0
+		Properties60:  {
+			Property: "ShadingModel", "KString", "", "Unknown"
+			Property: "MultiLayer", "bool", "",0
+			Property: "Maya", "Compound", ""
+			Property: "Maya|TypeId", "int", "",1138001
+			Property: "Maya|outAlpha", "float", "",0
+			Property: "Maya|normalCamera", "Vector3D", "",0,0,1
+			Property: "Maya|aiEnableMatte", "bool", "",0
+			Property: "Maya|aiMatteColor", "Vector3D", "",0,0,0
+			Property: "Maya|aiMatteColorA", "float", "",0
+			Property: "Maya|base", "float", "",1
+			Property: "Maya|baseColor", "Vector3D", "",0,0,0
+			Property: "Maya|diffuseRoughness", "float", "",0
+			Property: "Maya|specular", "float", "",1
+			Property: "Maya|specularColor", "Vector3D", "",1,1,1
+			Property: "Maya|specularRoughness", "float", "",1
+			Property: "Maya|specularIOR", "float", "",1.5
+			Property: "Maya|specularAnisotropy", "float", "",0
+			Property: "Maya|specularRotation", "float", "",0
+			Property: "Maya|metalness", "float", "",1
+			Property: "Maya|transmission", "float", "",0
+			Property: "Maya|transmissionColor", "Vector3D", "",1,1,1
+			Property: "Maya|transmissionDepth", "float", "",0
+			Property: "Maya|transmissionScatter", "Vector3D", "",0,0,0
+			Property: "Maya|transmissionScatterAnisotropy", "float", "",0
+			Property: "Maya|transmissionDispersion", "float", "",0
+			Property: "Maya|transmissionExtraRoughness", "float", "",0
+			Property: "Maya|transmitAovs", "bool", "",0
+			Property: "Maya|subsurface", "float", "",0
+			Property: "Maya|subsurfaceColor", "Vector3D", "",1,1,1
+			Property: "Maya|subsurfaceRadius", "Vector3D", "",1,1,1
+			Property: "Maya|subsurfaceScale", "float", "",1
+			Property: "Maya|subsurfaceAnisotropy", "float", "",0
+			Property: "Maya|subsurfaceType", "enum", "",1
+			Property: "Maya|sheen", "float", "",0
+			Property: "Maya|sheenColor", "Vector3D", "",1,1,1
+			Property: "Maya|sheenRoughness", "float", "",0.3
+			Property: "Maya|thinWalled", "bool", "",0
+			Property: "Maya|tangent", "Vector3D", "",0,0,0
+			Property: "Maya|coat", "float", "",0
+			Property: "Maya|coatColor", "Vector3D", "",1,1,1
+			Property: "Maya|coatRoughness", "float", "",0.1
+			Property: "Maya|coatIOR", "float", "",1.5
+			Property: "Maya|coatAnisotropy", "float", "",0
+			Property: "Maya|coatRotation", "float", "",0
+			Property: "Maya|coatNormal", "Vector3D", "",0,0,0
+			Property: "Maya|coatAffectColor", "float", "",0
+			Property: "Maya|coatAffectRoughness", "float", "",0
+			Property: "Maya|thinFilmThickness", "float", "",0
+			Property: "Maya|thinFilmIOR", "float", "",1.5
+			Property: "Maya|emission", "float", "",1
+			Property: "Maya|emissionColor", "Vector3D", "",0,0,0
+			Property: "Maya|opacity", "Vector3D", "",1,1,1
+			Property: "Maya|caustics", "bool", "",0
+			Property: "Maya|internalReflections", "bool", "",1
+			Property: "Maya|exitToBackground", "bool", "",0
+			Property: "Maya|indirectDiffuse", "float", "",1
+			Property: "Maya|indirectSpecular", "float", "",1
+			Property: "Maya|dielectricPriority", "int", "",0
+			Property: "Maya|aovId1", "KString", "", ""
+			Property: "Maya|id1", "Vector3D", "",0,0,0
+			Property: "Maya|aovId2", "KString", "", ""
+			Property: "Maya|id2", "Vector3D", "",0,0,0
+			Property: "Maya|aovId3", "KString", "", ""
+			Property: "Maya|id3", "Vector3D", "",0,0,0
+			Property: "Maya|aovId4", "KString", "", ""
+			Property: "Maya|id4", "Vector3D", "",0,0,0
+			Property: "Maya|aovId5", "KString", "", ""
+			Property: "Maya|id5", "Vector3D", "",0,0,0
+			Property: "Maya|aovId6", "KString", "", ""
+			Property: "Maya|id6", "Vector3D", "",0,0,0
+			Property: "Maya|aovId7", "KString", "", ""
+			Property: "Maya|id7", "Vector3D", "",0,0,0
+			Property: "Maya|aovId8", "KString", "", ""
+			Property: "Maya|id8", "Vector3D", "",0,0,0
+			Property: "Maya|normalCameraUsedAs", "int", "",1
+			Property: "Maya|normalCameraFactor", "double", "",1
+		}
+	}
+	Video: "Video::file39", "Clip" {
+		Type: "Clip"
+		Properties60:  {
+			Property: "Path", "KString", "", "/Users/johnathanzwang/Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Metallic.1001.png"
+             
+			Property: "RelPath", "KString", "", "../../../../../../Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Metallic.1001.png"
+             
+			Property: "Color", "ColorRGB", "",0.8,0.8,0.8
+			Property: "ClipIn", "KTime", "",0
+			Property: "ClipOut", "KTime", "",0
+			Property: "Offset", "KTime", "",0
+			Property: "PlaySpeed", "double", "",0
+			Property: "FreeRunning", "bool", "",0
+			Property: "Loop", "bool", "",0
+			Property: "Mute", "bool", "",0
+			Property: "AccessMode", "enum", "",0
+			Property: "ImageSequence", "bool", "",0
+			Property: "ImageSequenceOffset", "int", "",0
+			Property: "FrameRate", "double", "",0
+			Property: "LastFrame", "int", "",0
+			Property: "Width", "int", "",0
+			Property: "Height", "int", "",0
+			Property: "StartFrame", "int", "",0
+			Property: "StopFrame", "int", "",0
+			Property: "InterlaceMode", "enum", "",0
+		}
+		UseMipMap: 0
+		Filename: "/Users/johnathanzwang/Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Metallic.1001.png"
+        
+		RelativeFilename: "../../../../../../Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Metallic.1001.png"
+        
+	}
+	Video: "Video::file38", "Clip" {
+		Type: "Clip"
+		Properties60:  {
+			Property: "Path", "KString", "", "/Users/johnathanzwang/Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Emissive.1001.png"
+             
+			Property: "RelPath", "KString", "", "../../../../../../Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Emissive.1001.png"
+             
+			Property: "Color", "ColorRGB", "",0.8,0.8,0.8
+			Property: "ClipIn", "KTime", "",0
+			Property: "ClipOut", "KTime", "",0
+			Property: "Offset", "KTime", "",0
+			Property: "PlaySpeed", "double", "",0
+			Property: "FreeRunning", "bool", "",0
+			Property: "Loop", "bool", "",0
+			Property: "Mute", "bool", "",0
+			Property: "AccessMode", "enum", "",0
+			Property: "ImageSequence", "bool", "",0
+			Property: "ImageSequenceOffset", "int", "",0
+			Property: "FrameRate", "double", "",0
+			Property: "LastFrame", "int", "",0
+			Property: "Width", "int", "",0
+			Property: "Height", "int", "",0
+			Property: "StartFrame", "int", "",0
+			Property: "StopFrame", "int", "",0
+			Property: "InterlaceMode", "enum", "",0
+		}
+		UseMipMap: 0
+		Filename: "/Users/johnathanzwang/Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Emissive.1001.png"
+        
+		RelativeFilename: "../../../../../../Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Emissive.1001.png"
+        
+	}
+	Video: "Video::file37", "Clip" {
+		Type: "Clip"
+		Properties60:  {
+			Property: "Path", "KString", "", "/Users/johnathanzwang/Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Roughness.1001.png"
+             
+			Property: "RelPath", "KString", "", "../../../../../../Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Roughness.1001.png"
+             
+			Property: "Color", "ColorRGB", "",0.8,0.8,0.8
+			Property: "ClipIn", "KTime", "",0
+			Property: "ClipOut", "KTime", "",0
+			Property: "Offset", "KTime", "",0
+			Property: "PlaySpeed", "double", "",0
+			Property: "FreeRunning", "bool", "",0
+			Property: "Loop", "bool", "",0
+			Property: "Mute", "bool", "",0
+			Property: "AccessMode", "enum", "",0
+			Property: "ImageSequence", "bool", "",0
+			Property: "ImageSequenceOffset", "int", "",0
+			Property: "FrameRate", "double", "",0
+			Property: "LastFrame", "int", "",0
+			Property: "Width", "int", "",0
+			Property: "Height", "int", "",0
+			Property: "StartFrame", "int", "",0
+			Property: "StopFrame", "int", "",0
+			Property: "InterlaceMode", "enum", "",0
+		}
+		UseMipMap: 0
+		Filename: "/Users/johnathanzwang/Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Roughness.1001.png"
+        
+		RelativeFilename: "../../../../../../Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Roughness.1001.png"
+        
+	}
+	Video: "Video::file35", "Clip" {
+		Type: "Clip"
+		Properties60:  {
+			Property: "Path", "KString", "", "/Users/johnathanzwang/Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Normal.1001.png"
+             
+			Property: "RelPath", "KString", "", "../../../../../../Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Normal.1001.png"
+             
+			Property: "Color", "ColorRGB", "",0.8,0.8,0.8
+			Property: "ClipIn", "KTime", "",0
+			Property: "ClipOut", "KTime", "",0
+			Property: "Offset", "KTime", "",0
+			Property: "PlaySpeed", "double", "",0
+			Property: "FreeRunning", "bool", "",0
+			Property: "Loop", "bool", "",0
+			Property: "Mute", "bool", "",0
+			Property: "AccessMode", "enum", "",0
+			Property: "ImageSequence", "bool", "",0
+			Property: "ImageSequenceOffset", "int", "",0
+			Property: "FrameRate", "double", "",0
+			Property: "LastFrame", "int", "",0
+			Property: "Width", "int", "",0
+			Property: "Height", "int", "",0
+			Property: "StartFrame", "int", "",0
+			Property: "StopFrame", "int", "",0
+			Property: "InterlaceMode", "enum", "",0
+		}
+		UseMipMap: 0
+		Filename: "/Users/johnathanzwang/Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Normal.1001.png"
+        
+		RelativeFilename: "../../../../../../Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Normal.1001.png"
+        
+	}
+	Video: "Video::file35_ncl1_1", "Clip" {
+		Type: "Clip"
+		Properties60:  {
+			Property: "Path", "KString", "", "/Users/johnathanzwang/Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Normal.1001.png"
+             
+			Property: "RelPath", "KString", "", "../../../../../../Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Normal.1001.png"
+             
+			Property: "Color", "ColorRGB", "",0.8,0.8,0.8
+			Property: "ClipIn", "KTime", "",0
+			Property: "ClipOut", "KTime", "",0
+			Property: "Offset", "KTime", "",0
+			Property: "PlaySpeed", "double", "",0
+			Property: "FreeRunning", "bool", "",0
+			Property: "Loop", "bool", "",0
+			Property: "Mute", "bool", "",0
+			Property: "AccessMode", "enum", "",0
+			Property: "ImageSequence", "bool", "",0
+			Property: "ImageSequenceOffset", "int", "",0
+			Property: "FrameRate", "double", "",0
+			Property: "LastFrame", "int", "",0
+			Property: "Width", "int", "",0
+			Property: "Height", "int", "",0
+			Property: "StartFrame", "int", "",0
+			Property: "StopFrame", "int", "",0
+			Property: "InterlaceMode", "enum", "",0
+		}
+		UseMipMap: 0
+		Filename: "/Users/johnathanzwang/Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Normal.1001.png"
+        
+		RelativeFilename: "../../../../../../Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Normal.1001.png"
+        
+	}
+	Video: "Video::file36", "Clip" {
+		Type: "Clip"
+		Properties60:  {
+			Property: "Path", "KString", "", "/Users/johnathanzwang/Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Height.1001.png"
+             
+			Property: "RelPath", "KString", "", "../../../../../../Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Height.1001.png"
+             
+			Property: "Color", "ColorRGB", "",0.8,0.8,0.8
+			Property: "ClipIn", "KTime", "",0
+			Property: "ClipOut", "KTime", "",0
+			Property: "Offset", "KTime", "",0
+			Property: "PlaySpeed", "double", "",0
+			Property: "FreeRunning", "bool", "",0
+			Property: "Loop", "bool", "",0
+			Property: "Mute", "bool", "",0
+			Property: "AccessMode", "enum", "",0
+			Property: "ImageSequence", "bool", "",0
+			Property: "ImageSequenceOffset", "int", "",0
+			Property: "FrameRate", "double", "",0
+			Property: "LastFrame", "int", "",0
+			Property: "Width", "int", "",0
+			Property: "Height", "int", "",0
+			Property: "StartFrame", "int", "",0
+			Property: "StopFrame", "int", "",0
+			Property: "InterlaceMode", "enum", "",0
+		}
+		UseMipMap: 0
+		Filename: "/Users/johnathanzwang/Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Height.1001.png"
+        
+		RelativeFilename: "../../../../../../Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Height.1001.png"
+        
+	}
+	Texture: "Texture::file39", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::file39"
+		Properties60:  {
+			Property: "TextureTypeUse", "enum", "",0
+			Property: "Texture alpha", "Number", "A",1
+			Property: "CurrentMappingType", "enum", "",0
+			Property: "WrapModeU", "enum", "",0
+			Property: "WrapModeV", "enum", "",0
+			Property: "UVSwap", "bool", "",0
+			Property: "PremultiplyAlpha", "bool", "",1
+			Property: "Translation", "Vector", "A",0,0,0
+			Property: "Rotation", "Vector", "A",0,0,0
+			Property: "Scaling", "Vector", "A",1,1,1
+			Property: "TextureRotationPivot", "Vector3D", "",0,0,0
+			Property: "TextureScalingPivot", "Vector3D", "",0,0,0
+			Property: "CurrentTextureBlendMode", "enum", "",1
+			Property: "UVSet", "KString", "", "default"
+			Property: "UseMaterial", "bool", "",1
+			Property: "UseMipMap", "bool", "",0
+		}
+		Media: "Video::file39"
+		FileName: "/Users/johnathanzwang/Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Metallic.1001.png"
+        
+		RelativeFilename: "../../../../../../Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Metallic.1001.png"
+        
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: "Texture::file38", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::file38"
+		Properties60:  {
+			Property: "TextureTypeUse", "enum", "",0
+			Property: "Texture alpha", "Number", "A",1
+			Property: "CurrentMappingType", "enum", "",0
+			Property: "WrapModeU", "enum", "",0
+			Property: "WrapModeV", "enum", "",0
+			Property: "UVSwap", "bool", "",0
+			Property: "PremultiplyAlpha", "bool", "",1
+			Property: "Translation", "Vector", "A",0,0,0
+			Property: "Rotation", "Vector", "A",0,0,0
+			Property: "Scaling", "Vector", "A",1,1,1
+			Property: "TextureRotationPivot", "Vector3D", "",0,0,0
+			Property: "TextureScalingPivot", "Vector3D", "",0,0,0
+			Property: "CurrentTextureBlendMode", "enum", "",1
+			Property: "UVSet", "KString", "", "default"
+			Property: "UseMaterial", "bool", "",1
+			Property: "UseMipMap", "bool", "",0
+		}
+		Media: "Video::file38"
+		FileName: "/Users/johnathanzwang/Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Emissive.1001.png"
+        
+		RelativeFilename: "../../../../../../Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Emissive.1001.png"
+        
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: "Texture::file37", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::file37"
+		Properties60:  {
+			Property: "TextureTypeUse", "enum", "",0
+			Property: "Texture alpha", "Number", "A",1
+			Property: "CurrentMappingType", "enum", "",0
+			Property: "WrapModeU", "enum", "",0
+			Property: "WrapModeV", "enum", "",0
+			Property: "UVSwap", "bool", "",0
+			Property: "PremultiplyAlpha", "bool", "",1
+			Property: "Translation", "Vector", "A",0,0,0
+			Property: "Rotation", "Vector", "A",0,0,0
+			Property: "Scaling", "Vector", "A",1,1,1
+			Property: "TextureRotationPivot", "Vector3D", "",0,0,0
+			Property: "TextureScalingPivot", "Vector3D", "",0,0,0
+			Property: "CurrentTextureBlendMode", "enum", "",1
+			Property: "UVSet", "KString", "", "default"
+			Property: "UseMaterial", "bool", "",1
+			Property: "UseMipMap", "bool", "",0
+		}
+		Media: "Video::file37"
+		FileName: "/Users/johnathanzwang/Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Roughness.1001.png"
+        
+		RelativeFilename: "../../../../../../Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Roughness.1001.png"
+        
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: "Texture::file35", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::file35"
+		Properties60:  {
+			Property: "TextureTypeUse", "enum", "",0
+			Property: "Texture alpha", "Number", "A",1
+			Property: "CurrentMappingType", "enum", "",0
+			Property: "WrapModeU", "enum", "",0
+			Property: "WrapModeV", "enum", "",0
+			Property: "UVSwap", "bool", "",0
+			Property: "PremultiplyAlpha", "bool", "",1
+			Property: "Translation", "Vector", "A",0,0,0
+			Property: "Rotation", "Vector", "A",0,0,0
+			Property: "Scaling", "Vector", "A",1,1,1
+			Property: "TextureRotationPivot", "Vector3D", "",0,0,0
+			Property: "TextureScalingPivot", "Vector3D", "",0,0,0
+			Property: "CurrentTextureBlendMode", "enum", "",1
+			Property: "UVSet", "KString", "", "default"
+			Property: "UseMaterial", "bool", "",1
+			Property: "UseMipMap", "bool", "",0
+		}
+		Media: "Video::file35"
+		FileName: "/Users/johnathanzwang/Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Normal.1001.png"
+        
+		RelativeFilename: "../../../../../../Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Normal.1001.png"
+        
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: "Texture::file35_ncl1_1", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::file35_ncl1_1"
+		Properties60:  {
+			Property: "TextureTypeUse", "enum", "",0
+			Property: "Texture alpha", "Number", "A",1
+			Property: "CurrentMappingType", "enum", "",0
+			Property: "WrapModeU", "enum", "",0
+			Property: "WrapModeV", "enum", "",0
+			Property: "UVSwap", "bool", "",0
+			Property: "PremultiplyAlpha", "bool", "",1
+			Property: "Translation", "Vector", "A",0,0,0
+			Property: "Rotation", "Vector", "A",0,0,0
+			Property: "Scaling", "Vector", "A",1,1,1
+			Property: "TextureRotationPivot", "Vector3D", "",0,0,0
+			Property: "TextureScalingPivot", "Vector3D", "",0,0,0
+			Property: "CurrentTextureBlendMode", "enum", "",0
+			Property: "UVSet", "KString", "", "map1"
+			Property: "UseMaterial", "bool", "",1
+			Property: "UseMipMap", "bool", "",0
+		}
+		Media: "Video::file35_ncl1_1"
+		FileName: "/Users/johnathanzwang/Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Normal.1001.png"
+        
+		RelativeFilename: "../../../../../../Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Normal.1001.png"
+        
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: "Texture::file36", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::file36"
+		Properties60:  {
+			Property: "TextureTypeUse", "enum", "",0
+			Property: "Texture alpha", "Number", "A",1
+			Property: "CurrentMappingType", "enum", "",0
+			Property: "WrapModeU", "enum", "",0
+			Property: "WrapModeV", "enum", "",0
+			Property: "UVSwap", "bool", "",0
+			Property: "PremultiplyAlpha", "bool", "",1
+			Property: "Translation", "Vector", "A",0,0,0
+			Property: "Rotation", "Vector", "A",0,0,0
+			Property: "Scaling", "Vector", "A",1,1,1
+			Property: "TextureRotationPivot", "Vector3D", "",0,0,0
+			Property: "TextureScalingPivot", "Vector3D", "",0,0,0
+			Property: "CurrentTextureBlendMode", "enum", "",0
+			Property: "UVSet", "KString", "", "map1"
+			Property: "UseMaterial", "bool", "",1
+			Property: "UseMipMap", "bool", "",0
+		}
+		Media: "Video::file36"
+		FileName: "/Users/johnathanzwang/Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Height.1001.png"
+        
+		RelativeFilename: "../../../../../../Documents/Adobe/Adobe Substance 3D Painter/export/Brick/Trimsheet_standardSurface1_Height.1001.png"
+        
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Implementation: "Implementation::aiStandardSurface1_Implementation", "" {
+		Version: 100
+		Properties60:  {
+			Property: "ShaderLanguage", "KString", "", "AiOSL"
+			Property: "ShaderLanguageVersion", "KString", "", ""
+			Property: "RenderAPI", "KString", "", "ARNOLD_SHADER_ID"
+			Property: "RenderAPIVersion", "KString", "", "5.3"
+			Property: "RootBindingName", "KString", "", "root"
+			Property: "Constants", "Compound", ""
+		}
+	}
+	BindingTable: "BindingTable::root 18", "" {
+		Version: 100
+		Properties60:  {
+			Property: "TargetName", "KString", "", "root"
+			Property: "TargetType", "KString", "", "shader"
+			Property: "CodeAbsoluteURL", "KString", "", ""
+			Property: "CodeRelativeURL", "KString", "", ""
+			Property: "CodeTAG", "KString", "", "shader"
+			Property: "DescAbsoluteURL", "KString", "", ""
+			Property: "DescRelativeURL", "KString", "", ""
+			Property: "DescTAG", "KString", "", "shader"
+		}
+		Entry: "Maya|specularIOR", "FbxPropertyEntry", "specularIOR", "FbxSemanticEntry"
+		Entry: "Maya|aiEnableMatte", "FbxPropertyEntry", "aiEnableMatte", "FbxSemanticEntry"
+		Entry: "Maya|id5", "FbxPropertyEntry", "id5", "FbxSemanticEntry"
+		Entry: "Maya|emission", "FbxPropertyEntry", "emission", "FbxSemanticEntry"
+		Entry: "Maya|thinFilmThickness", "FbxPropertyEntry", "thinFilmThickness", "FbxSemanticEntry"
+		Entry: "Maya|coatAffectColor", "FbxPropertyEntry", "coatAffectColor", "FbxSemanticEntry"
+		Entry: "Maya|sheenColor", "FbxPropertyEntry", "sheenColor", "FbxSemanticEntry"
+		Entry: "Maya|aovId2", "FbxPropertyEntry", "aovId2", "FbxSemanticEntry"
+		Entry: "Maya|sheen", "FbxPropertyEntry", "sheen", "FbxSemanticEntry"
+		Entry: "Maya|transmissionDepth", "FbxPropertyEntry", "transmissionDepth", "FbxSemanticEntry"
+		Entry: "Maya|transmissionColor", "FbxPropertyEntry", "transmissionColor", "FbxSemanticEntry"
+		Entry: "Maya|specularColor", "FbxPropertyEntry", "specularColor", "FbxSemanticEntry"
+		Entry: "Maya|id4", "FbxPropertyEntry", "id4", "FbxSemanticEntry"
+		Entry: "Maya|aiMatteColor", "FbxPropertyEntry", "aiMatteColor", "FbxSemanticEntry"
+		Entry: "Maya|sheenRoughness", "FbxPropertyEntry", "sheenRoughness", "FbxSemanticEntry"
+		Entry: "Maya|exitToBackground", "FbxPropertyEntry", "exitToBackground", "FbxSemanticEntry"
+		Entry: "Maya|tangent", "FbxPropertyEntry", "tangent", "FbxSemanticEntry"
+		Entry: "Maya|metalness", "FbxPropertyEntry", "metalness", "FbxSemanticEntry"
+		Entry: "Maya|id7", "FbxPropertyEntry", "id7", "FbxSemanticEntry"
+		Entry: "Maya|baseColor", "FbxPropertyEntry", "baseColor", "FbxSemanticEntry"
+		Entry: "Maya|base", "FbxPropertyEntry", "base", "FbxSemanticEntry"
+		Entry: "Maya|id2", "FbxPropertyEntry", "id2", "FbxSemanticEntry"
+		Entry: "Maya|indirectSpecular", "FbxPropertyEntry", "indirectSpecular", "FbxSemanticEntry"
+		Entry: "Maya|coatNormal", "FbxPropertyEntry", "coatNormal", "FbxSemanticEntry"
+		Entry: "Maya|coatRoughness", "FbxPropertyEntry", "coatRoughness", "FbxSemanticEntry"
+		Entry: "Maya|subsurfaceType", "FbxPropertyEntry", "subsurfaceType", "FbxSemanticEntry"
+		Entry: "Maya|transmissionExtraRoughness", "FbxPropertyEntry", "transmissionExtraRoughness", "FbxSemanticEntry"
+		Entry: "Maya|specular", "FbxPropertyEntry", "specular", "FbxSemanticEntry"
+		Entry: "Maya|aovId7", "FbxPropertyEntry", "aovId7", "FbxSemanticEntry"
+		Entry: "Maya|aovId6", "FbxPropertyEntry", "aovId6", "FbxSemanticEntry"
+		Entry: "Maya|caustics", "FbxPropertyEntry", "caustics", "FbxSemanticEntry"
+		Entry: "Maya|subsurfaceScale", "FbxPropertyEntry", "subsurfaceScale", "FbxSemanticEntry"
+		Entry: "Maya|specularAnisotropy", "FbxPropertyEntry", "specularAnisotropy", "FbxSemanticEntry"
+		Entry: "Maya|diffuseRoughness", "FbxPropertyEntry", "diffuseRoughness", "FbxSemanticEntry"
+		Entry: "Maya|aiMatteColorA", "FbxPropertyEntry", "aiMatteColorA", "FbxSemanticEntry"
+		Entry: "Maya|aovId4", "FbxPropertyEntry", "aovId4", "FbxSemanticEntry"
+		Entry: "Maya|aovId3", "FbxPropertyEntry", "aovId3", "FbxSemanticEntry"
+		Entry: "Maya|internalReflections", "FbxPropertyEntry", "internalReflections", "FbxSemanticEntry"
+		Entry: "Maya|transmissionDispersion", "FbxPropertyEntry", "transmissionDispersion", "FbxSemanticEntry"
+		Entry: "Maya|dielectricPriority", "FbxPropertyEntry", "dielectricPriority", "FbxSemanticEntry"
+		Entry: "Maya|transmission", "FbxPropertyEntry", "transmission", "FbxSemanticEntry"
+		Entry: "Maya|id8", "FbxPropertyEntry", "id8", "FbxSemanticEntry"
+		Entry: "Maya|outAlpha", "FbxPropertyEntry", "outAlpha", "FbxSemanticEntry"
+		Entry: "Maya|emissionColor", "FbxPropertyEntry", "emissionColor", "FbxSemanticEntry"
+		Entry: "Maya|subsurfaceAnisotropy", "FbxPropertyEntry", "subsurfaceAnisotropy", "FbxSemanticEntry"
+		Entry: "Maya|subsurface", "FbxPropertyEntry", "subsurface", "FbxSemanticEntry"
+		Entry: "Maya|specularRoughness", "FbxPropertyEntry", "specularRoughness", "FbxSemanticEntry"
+		Entry: "Maya|coatColor", "FbxPropertyEntry", "coatColor", "FbxSemanticEntry"
+		Entry: "Maya|aovId5", "FbxPropertyEntry", "aovId5", "FbxSemanticEntry"
+		Entry: "Maya|transmissionScatterAnisotropy", "FbxPropertyEntry", "transmissionScatterAnisotropy", "FbxSemanticEntry"
+		Entry: "Maya|indirectDiffuse", "FbxPropertyEntry", "indirectDiffuse", "FbxSemanticEntry"
+		Entry: "Maya|coatIOR", "FbxPropertyEntry", "coatIOR", "FbxSemanticEntry"
+		Entry: "Maya|specularRotation", "FbxPropertyEntry", "specularRotation", "FbxSemanticEntry"
+		Entry: "Maya|coatAffectRoughness", "FbxPropertyEntry", "coatAffectRoughness", "FbxSemanticEntry"
+		Entry: "Maya|coatRotation", "FbxPropertyEntry", "coatRotation", "FbxSemanticEntry"
+		Entry: "Maya|transmitAovs", "FbxPropertyEntry", "transmitAovs", "FbxSemanticEntry"
+		Entry: "Maya|aovId1", "FbxPropertyEntry", "aovId1", "FbxSemanticEntry"
+		Entry: "Maya|coat", "FbxPropertyEntry", "coat", "FbxSemanticEntry"
+		Entry: "Maya|thinWalled", "FbxPropertyEntry", "thinWalled", "FbxSemanticEntry"
+		Entry: "Maya|id6", "FbxPropertyEntry", "id6", "FbxSemanticEntry"
+		Entry: "Maya|id1", "FbxPropertyEntry", "id1", "FbxSemanticEntry"
+		Entry: "Maya|opacity", "FbxPropertyEntry", "opacity", "FbxSemanticEntry"
+		Entry: "Maya|thinFilmIOR", "FbxPropertyEntry", "thinFilmIOR", "FbxSemanticEntry"
+		Entry: "Maya|aovId8", "FbxPropertyEntry", "aovId8", "FbxSemanticEntry"
+		Entry: "Maya|coatAnisotropy", "FbxPropertyEntry", "coatAnisotropy", "FbxSemanticEntry"
+		Entry: "Maya|subsurfaceRadius", "FbxPropertyEntry", "subsurfaceRadius", "FbxSemanticEntry"
+		Entry: "Maya|normalCamera", "FbxPropertyEntry", "normalCamera", "FbxSemanticEntry"
+		Entry: "Maya|subsurfaceColor", "FbxPropertyEntry", "subsurfaceColor", "FbxSemanticEntry"
+		Entry: "Maya|transmissionScatter", "FbxPropertyEntry", "transmissionScatter", "FbxSemanticEntry"
+		Entry: "Maya|id3", "FbxPropertyEntry", "id3", "FbxSemanticEntry"
+	}
+	GlobalSettings:  {
+		Version: 1000
+		Properties60:  {
+			Property: "UpAxis", "int", "",1
+			Property: "UpAxisSign", "int", "",1
+			Property: "FrontAxis", "int", "",2
+			Property: "FrontAxisSign", "int", "",1
+			Property: "CoordAxis", "int", "",0
+			Property: "CoordAxisSign", "int", "",1
+			Property: "OriginalUpAxis", "int", "",1
+			Property: "OriginalUpAxisSign", "int", "",1
+			Property: "UnitScaleFactor", "double", "",1
+			Property: "OriginalUnitScaleFactor", "double", "",1
+			Property: "AmbientColor", "ColorRGB", "",0,0,0
+			Property: "DefaultCamera", "KString", "", "Producer Perspective"
+			Property: "TimeMode", "enum", "",11
+			Property: "TimeProtocol", "enum", "",2
+			Property: "SnapOnFrameMode", "enum", "",0
+			Property: "TimeSpanStart", "KTime", "",0
+			Property: "TimeSpanStop", "KTime", "",577326975000
+			Property: "CustomFrameRate", "double", "",-1
+		}
+	}
+}
+
+; Object connections
+;------------------------------------------------------------------
+
+Connections:  {
+	Connect: "OO", "Model::pPlane56", "Model::Scene"
+	Connect: "OP", "Texture::file35", "Material::aiStandardSurface1", "Maya|normalCamera"
+	Connect: "OP", "Texture::file37", "Material::aiStandardSurface1", "Maya|specularRoughness"
+	Connect: "OP", "Texture::file39", "Material::aiStandardSurface1", "Maya|metalness"
+	Connect: "OP", "Texture::file38", "Material::aiStandardSurface1", "Maya|emissionColor"
+	Connect: "OO", "Material::aiStandardSurface1", "Implementation::aiStandardSurface1_Implementation"
+	Connect: "OO", "BindingTable::root 18", "Implementation::aiStandardSurface1_Implementation"
+	Connect: "OO", "Video::file39", "Texture::file39"
+	Connect: "OO", "Video::file38", "Texture::file38"
+	Connect: "OO", "Video::file37", "Texture::file37"
+	Connect: "OO", "Video::file35", "Texture::file35"
+	Connect: "OO", "Video::file35_ncl1_1", "Texture::file35_ncl1_1"
+	Connect: "OO", "Video::file36", "Texture::file36"
+	Connect: "OO", "Material::aiStandardSurface1", "Model::pPlane56"
+}
+;Takes and animation section
+;----------------------------------------------------
+
+Takes:  {
+	Current: "Take 001"
+	Take: "Take 001" {
+		FileName: "Take_001.tak"
+		LocalTime: 0,577326975000
+		ReferenceTime: 0,577326975000
+		
+		;Models animation
+		;----------------------------------------------------
+		
+		;Generic nodes animation
+		;----------------------------------------------------
+		
+		;Textures animation
+		;----------------------------------------------------
+		
+		;Materials animation
+		;----------------------------------------------------
+		
+		
+		;Constraints animation
+		;----------------------------------------------------
+	}
+}
+;Version 5 settings
+;------------------------------------------------------------------
+
+Version5:  {
+	AmbientRenderSettings:  {
+		Version: 101
+		AmbientLightColor: 0,0,0,1
+	}
+	FogOptions:  {
+		FlogEnable: 0
+		FogMode: 0
+		FogDensity: 0.002
+		FogStart: 0.3
+		FogEnd: 1000
+		FogColor: 1,1,1,1
+	}
+	Settings:  {
+		FrameRate: "24"
+		TimeFormat: 1
+		SnapOnFrames: 0
+		ReferenceTimeIndex: -1
+		TimeLineStartTime: 0
+		TimeLineStopTime: 1764000000
+	}
+	RendererSetting:  {
+		DefaultCamera: "Producer Perspective"
+		DefaultViewingMode: 0
+	}
+}
