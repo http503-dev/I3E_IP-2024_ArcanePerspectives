@@ -10,6 +10,12 @@ using UnityEngine;
 public class Collectible : Interactable
 {
     /// <summary>
+    /// sound for picking up pickaxe
+    /// </summary>
+    [SerializeField]
+    private AudioClip collectAudio;
+
+    /// <summary>
     /// bool to determine whether collectible has been collected
     /// </summary>
     public bool hasCollectible = false;
@@ -24,5 +30,9 @@ public class Collectible : Interactable
         hasCollectible = true;
         GameManager.instance.SetHasCollectible(hasCollectible);
         Destroy(gameObject);
+        if (collectAudio != null)
+        {
+            AudioManager.instance.PlaySFX(collectAudio, transform.position);
+        }
     }
 }

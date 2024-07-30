@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// references the player
     /// </summary>
-    private GameObject player;
+    public GameObject player;
 
     /// <summary>
     /// indicates player's reputation and whether they have obtained the collectible
