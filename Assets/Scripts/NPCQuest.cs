@@ -21,6 +21,11 @@ public class NPCQuest : Interactable
     /// </summary>
     bool reputationAwarded = false;
 
+    public string[] noQuestDialogue;
+    public string[] questStartDialogue;
+    public string[] questAcceptedDialogue;
+    public string[] questDoneDialogue;
+
     /// <summary>
     /// starts FSM
     /// </summary>
@@ -59,6 +64,12 @@ public class NPCQuest : Interactable
     /// <param name="thePlayer"></param>
     public override void Interact(Player thePlayer)
     {
+        if (DialogueManager.instance.IsDisplayingDialogue())
+        {
+
+            return;
+        }
+
         if (currentState == "NoQuest")
         {
             nextState = "QuestStart";
@@ -71,13 +82,14 @@ public class NPCQuest : Interactable
             }
             else
             {
-                nextState = "QuestAccepted"; // Player interacts without having the collectible
+                nextState = "QuestAccepted";
             }
         }
         else if (currentState == "QuestDone")
         {
-            nextState = "QuestDone"; // Player interacts after completing the quest
+            nextState = "QuestDone";
         }
+
         SwitchState();
     }
 
@@ -87,8 +99,8 @@ public class NPCQuest : Interactable
     /// <returns></returns>
     IEnumerator NoQuest()
     {
-        Debug.Log("No quest available.");
-        yield return null;
+        DialogueManager.instance.StartDialogue(noQuestDialogue);
+        yield return new WaitUntil(() => !DialogueManager.instance.IsDisplayingDialogue());
     }
 
     /// <summary>
@@ -98,7 +110,8 @@ public class NPCQuest : Interactable
     IEnumerator QuestStart()
     {
         Debug.Log("Collect the thing");
-        yield return new WaitForEndOfFrame();
+        DialogueManager.instance.StartDialogue(questStartDialogue);
+        yield return new WaitUntil(() => !DialogueManager.instance.IsDisplayingDialogue());
         nextState = "QuestAccepted";
     }
 
@@ -114,8 +127,8 @@ public class NPCQuest : Interactable
         }
         else
         {
-            Debug.Log("You don't have my thing");
-            yield return null; // Stay in the same state
+            DialogueManager.instance.StartDialogue(questAcceptedDialogue);
+            yield return new WaitUntil(() => !DialogueManager.instance.IsDisplayingDialogue());
         }
     }
 
@@ -127,15 +140,16 @@ public class NPCQuest : Interactable
     {
         if (!reputationAwarded)
         {
-            Debug.Log("Thank you for collecting my thing");
-            GameManager.instance.AddReputation(10); // Reward player with reputation
-            reputationAwarded = true; // Ensure this reward is given only once
+            DialogueManager.instance.StartDialogue(questDoneDialogue);
+            yield return new WaitUntil(() => !DialogueManager.instance.IsDisplayingDialogue());
+            GameManager.instance.AddReputation(10);
+            reputationAwarded = true;
         }
         else
         {
-            Debug.Log("Thank you again, but you already have your reward.");
+            DialogueManager.instance.StartDialogue(new string[] { "Thank you again, but you already have your reward." });
+            yield return new WaitUntil(() => !DialogueManager.instance.IsDisplayingDialogue());
         }
-        yield return new WaitForEndOfFrame();
-        nextState = "QuestDone"; // Stay in the QuestDone state
+        nextState = "QuestDone";
     }
 }

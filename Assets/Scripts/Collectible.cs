@@ -1,7 +1,7 @@
 /*
  * Author: Muhammad Farhan
  * Date: 22/7/2024
- * Description: Script related the collectible
+ * Description: Script related to the collectible
  */
 using System.Collections;
 using System.Collections.Generic;
