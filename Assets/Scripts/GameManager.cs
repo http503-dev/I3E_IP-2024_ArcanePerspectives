@@ -25,6 +25,12 @@ public class GameManager : MonoBehaviour
     public GameObject player;
 
     /// <summary>
+    /// to get checkpoint positions
+    /// </summary>
+    public Vector3 lastCheckpoint;
+    public Vector3 initialSpawn;
+
+    /// <summary>
     /// indicates player's reputation and whether they have obtained the collectible
     /// </summary>
     public int reputation;
@@ -42,6 +48,8 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI repText;
     public TextMeshProUGUI inventoryText;
     public Slider healthSlider;
+    public GameObject deathScreenUI;
+    public GameObject pauseMenuUI;
     public GameObject playerUI;
 
     private void Awake()
@@ -128,9 +136,73 @@ public class GameManager : MonoBehaviour
         if (currentHealth <= 0)
         {
             currentHealth = 0;
+            Die();
         }
         UpdateHealthUI();
     }
+
+    /// <summary>
+    /// logic for when player dies
+    /// </summary>
+    void Die()
+    {
+        if (deathScreenUI != null)
+        {
+            pauseMenuUI.SetActive(false);
+            playerUI.SetActive(false);
+            deathScreenUI.SetActive(true);
+        }
+        Time.timeScale = 0f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        if (player != null)
+        {
+            player.GetComponent<FirstPersonController>().enabled = false;
+        }
+    }
+
+    /// <summary>
+    /// logic for setting checkpoints
+    /// </summary>
+    /// <param name="checkpointPosition"></param>
+    public static void SetCheckpoint(Vector3 checkpointPosition)
+    {
+        if (instance != null)
+        {
+            instance.lastCheckpoint = checkpointPosition;
+            instance.currentHealth = instance.maxHealth;
+            instance.UpdateHealthUI();
+        }
+    }
+
+    /// <summary>
+    /// logic for respawning player
+    /// </summary>
+    public void Respawn()
+    {
+        if (player != null)
+        {
+            if (lastCheckpoint != null)
+            {
+                player.transform.position = lastCheckpoint;
+            }
+            else
+            {
+                player.transform.position = initialSpawn;
+            }
+
+            currentHealth = maxHealth;
+            UpdateHealthUI();
+            deathScreenUI.SetActive(false);
+            playerUI.SetActive(true);
+            Time.timeScale = 1f; // Resume the game
+            Cursor.lockState = CursorLockMode.Locked; // Lock the cursor
+            Cursor.visible = false; // Hide the cursor
+            player.GetComponent<FirstPersonController>().enabled = true;
+        }
+    }
+
 
     /// <summary>
     /// Logic to load main menu
@@ -140,6 +212,17 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
         Destroy(gameObject);
+    }
+
+    public void ResetGameState()
+    {
+        currentHealth = maxHealth;
+        inventoryText.text = null;
+        hasCollectible = false;
+
+        lastCheckpoint = initialSpawn;
+        player.transform.position = initialSpawn;
+        UpdateHealthUI();
     }
 
     /// <summary>
@@ -170,16 +253,5 @@ public class GameManager : MonoBehaviour
         reputation += amount;
         repText.text += reputation;
         Debug.Log("Reputation increased by " + amount + ". Total reputation: " + reputation);
-    }
-
-    /// <summary>
-    /// function to reduce reputation
-    /// </summary>
-    /// <param name="amount"></param>
-    public void ReduceReputation(int amount)
-    {
-        reputation -= amount;
-        repText.text = "Reputation: " + reputation; // Update text properly
-        Debug.Log("Reputation decreased by " + amount + ". Total reputation: " + reputation);
     }
 }

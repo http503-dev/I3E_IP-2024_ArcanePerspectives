@@ -1,3 +1,8 @@
+/*
+ * Author: Muhammad Farhan
+ * Date: 30/7/2024
+ * Description: Script related to the boss's health
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,11 +10,17 @@ using UnityEngine.UI;
 
 public class BossHealth : MonoBehaviour
 {
-    public int maxHealth = 100;
-    private int currentHealth;
+    /// <summary>
+    /// references boss health/ ui elements
+    /// </summary>
+    public float maxHealth = 100;
+    private float currentHealth;
     public Slider healthBar;
     public GameObject healthBarUI;
 
+    /// <summary>
+    /// initialize boss health stuff
+    /// </summary>
     private void Start()
     {
         currentHealth = maxHealth;
@@ -18,7 +29,11 @@ public class BossHealth : MonoBehaviour
         healthBarUI.SetActive(true);
     }
 
-    public void TakeDamage(int damage)
+    /// <summary>
+    /// logic for boss to take damage
+    /// </summary>
+    /// <param name="damage"></param>
+    public void TakeDamage(float damage)
     {
         currentHealth -= damage;
         healthBar.value = currentHealth;
@@ -29,6 +44,9 @@ public class BossHealth : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// function for him to die
+    /// </summary>
     private void Die()
     {
         // Add death logic here

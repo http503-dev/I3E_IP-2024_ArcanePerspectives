@@ -1,3 +1,8 @@
+/*
+ * Author: Muhammad Farhan
+ * Date: 30/7/2024
+ * Description: Script related to the boss's AI
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,17 +10,23 @@ using UnityEngine.AI;
 
 public class BossAI : MonoBehaviour
 {
-    public float attackDistance = 10f;
+    /// <summary>
+    /// references for boss 'stats' and where/what he throws
+    /// </summary>
+    public float attackDistance = 20f;
     public float moveSpeed = 2f;
+    public float throwForce = 20f;
+    public float attackCooldown = 4f;
     public GameObject projectilePrefab;
     public Transform throwPoint;
-    public float throwForce = 10f;
-    public float attackCooldown = 2f;
 
     private float nextAttackTime;
     private NavMeshAgent navMeshAgent;
     private Transform player;
 
+    /// <summary>
+    /// initialize nav mesh 
+    /// </summary>
     private void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -23,6 +34,9 @@ public class BossAI : MonoBehaviour
         player = GameManager.instance.player.transform;
     }
 
+    /// <summary>
+    /// function to update whether to chase or attack player
+    /// </summary>
     private void Update()
     {
         if (player == null)
@@ -46,17 +60,26 @@ public class BossAI : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// logic for chasing
+    /// </summary>
     private void ChasePlayer()
     {
         navMeshAgent.SetDestination(player.position);
     }
 
+    /// <summary>
+    /// logic for attacking
+    /// </summary>
     private void AttackPlayer()
     {
         nextAttackTime = Time.time + attackCooldown;
         ThrowProjectile();
     }
 
+    /// <summary>
+    /// logic for throwing projectile
+    /// </summary>
     private void ThrowProjectile()
     {
         GameObject projectile = Instantiate(projectilePrefab, throwPoint.position, throwPoint.rotation);

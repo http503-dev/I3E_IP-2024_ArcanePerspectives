@@ -33,7 +33,11 @@ public class Interactable : MonoBehaviour
     /// <param name="thePlayer"></param>
     public virtual void Interact(Player thePlayer)
     {
+        // Check if the object should be picked up
+        if (gameObject.CompareTag("Throwable"))
+        {
+            thePlayer.PickUpObject(transform);
+        }
         Debug.Log(gameObject.name + " was interacted with");
-        thePlayer.PickUpObject(transform); // Call the PickUpObject method when interacting
     }
 }

@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6698482998126043073}
   - component: {fileID: 1888088535476487799}
   - component: {fileID: -1814338621391275631}
+  - component: {fileID: -8774763653664647870}
+  - component: {fileID: 1457981685975033540}
   m_Layer: 6
   m_Name: Sphere
   m_TagString: Throwable
@@ -133,3 +135,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-8774763653664647870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3513193211178701832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232a6020956f17643a0797f454f8de70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+--- !u!114 &1457981685975033540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3513193211178701832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38b5eff0e69ed24409c39258524b2cdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

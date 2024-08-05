@@ -10,6 +10,7 @@ using UnityEngine.AI;
 
 public class GuardFSM : MonoBehaviour
 {
+    [SerializeField] private AudioClip hurtAudio;
     /// <summary>
     /// strings to switch states
     /// </summary>
@@ -24,8 +25,8 @@ public class GuardFSM : MonoBehaviour
     public float attackDistance = 2f;
     public float loseSightDistance = 10f;
     public int reputationThreshold = 10;
-
     public NavMeshAgent agent;
+    public float attackCooldown = 1.5f;
 
     /// <summary>
     /// starts FSM
@@ -77,7 +78,7 @@ public class GuardFSM : MonoBehaviour
     {
         while (true)
         {
-            if (Vector3.Distance(transform.position, player.position) <= chaseDistance && GameManager.instance.reputation < reputationThreshold)
+            if (player != null && Vector3.Distance(transform.position, player.position) <= chaseDistance && GameManager.instance.reputation < reputationThreshold)
             {
                 nextState = "Chase";
             }
@@ -93,7 +94,11 @@ public class GuardFSM : MonoBehaviour
     {
         while (true)
         {
-            if (Vector3.Distance(transform.position, player.position) > loseSightDistance)
+            if (player == null)
+            {
+                nextState = "Idle";
+            }
+            else if (Vector3.Distance(transform.position, player.position) > loseSightDistance)
             {
                 nextState = "Idle";
             }
@@ -117,6 +122,10 @@ public class GuardFSM : MonoBehaviour
     {
         while (true)
         {
+            if (player == null)
+            {
+                nextState = "Idle";
+            }
             if (Vector3.Distance(transform.position, player.position) > attackDistance)
             {
                 nextState = "Chase";
@@ -125,6 +134,14 @@ public class GuardFSM : MonoBehaviour
             {
                 // Implement attack logic here
                 Debug.Log("Attacking the player");
+                GameManager.instance.TakeDamage(20);
+
+                if (hurtAudio != null)
+                {
+                    AudioManager.instance.PlaySFX(hurtAudio, transform.position);
+                }
+
+                yield return new WaitForSeconds(attackCooldown); // Add delay between attacks
             }
             yield return null;
         }
@@ -138,7 +155,6 @@ public class GuardFSM : MonoBehaviour
     {
         Debug.Log("Guard is dead");
         agent.isStopped = true;
-        GameManager.instance.ReduceReputation(10); // Reduce reputation when guard dies
         yield return null;
     }
 }
