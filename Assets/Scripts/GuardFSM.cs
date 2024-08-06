@@ -21,12 +21,13 @@ public class GuardFSM : MonoBehaviour
     /// references
     /// </summary>
     public Transform player;
-    public float chaseDistance = 6f;
+    public float chaseDistance = 10f;
     public float attackDistance = 2f;
-    public float loseSightDistance = 10f;
-    public int reputationThreshold = 10;
-    public NavMeshAgent agent;
+    public float loseSightDistance = 15f;
+    public int reputationThreshold = 10; // to change
     public float attackCooldown = 1.5f;
+    public NavMeshAgent agent;
+    public Animator animator;
 
     /// <summary>
     /// starts FSM
@@ -67,7 +68,9 @@ public class GuardFSM : MonoBehaviour
     public void Die()
     {
         nextState = "Dead";
-        SwitchState();
+        animator.SetBool("isDead", true);
+        StopAllCoroutines(); // Stop all ongoing coroutines
+        StartCoroutine(Dead()); // Directly call the Dead coroutine
     }
 
     /// <summary>
@@ -76,6 +79,11 @@ public class GuardFSM : MonoBehaviour
     /// <returns></returns>
     IEnumerator Idle()
     {
+        animator.SetBool("isIdle", true);
+        animator.SetBool("isChasing", false);
+        animator.SetBool("isAttacking", false);
+        animator.SetBool("isDead", false);
+
         while (true)
         {
             if (player != null && Vector3.Distance(transform.position, player.position) <= chaseDistance && GameManager.instance.reputation < reputationThreshold)
@@ -92,6 +100,11 @@ public class GuardFSM : MonoBehaviour
     /// <returns></returns>
     IEnumerator Chase()
     {
+        animator.SetBool("isIdle", false);
+        animator.SetBool("isChasing", true);
+        animator.SetBool("isAttacking", false);
+        animator.SetBool("isDead", false);
+
         while (true)
         {
             if (player == null)
@@ -120,6 +133,11 @@ public class GuardFSM : MonoBehaviour
     /// <returns></returns>
     IEnumerator Attack()
     {
+        animator.SetBool("isIdle", false);
+        animator.SetBool("isChasing", false);
+        animator.SetBool("isAttacking", true);
+        animator.SetBool("isDead", false);
+
         while (true)
         {
             if (player == null)
@@ -153,8 +171,14 @@ public class GuardFSM : MonoBehaviour
     /// <returns></returns>
     IEnumerator Dead()
     {
+        animator.SetBool("isIdle", false);
+        animator.SetBool("isChasing", false);
+        animator.SetBool("isAttacking", false);
+        animator.SetBool("isDead", true);
+
         Debug.Log("Guard is dead");
         agent.isStopped = true;
-        yield return null;
+        yield return new WaitForSeconds(4f); // Wait for the death animation to play out
+        Destroy(gameObject);
     }
 }

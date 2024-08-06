@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class NPCQuest : Interactable
 {
@@ -21,16 +22,34 @@ public class NPCQuest : Interactable
     /// </summary>
     bool reputationAwarded = false;
 
+    /// <summary>
+    /// dialogue for different states
+    /// </summary>
     public string[] noQuestDialogue;
     public string[] questStartDialogue;
     public string[] questAcceptedDialogue;
     public string[] questDoneDialogue;
 
     /// <summary>
+    /// waypoints for different states
+    /// </summary>
+    public Transform noQuestAreaMin;
+    public Transform noQuestAreaMax;
+    public Transform questDoneAreaMin;
+    public Transform questDoneAreaMax;
+
+    /// <summary>
+    /// references for nav mesh
+    /// </summary>
+    private NavMeshAgent agent;
+    private float moveInterval = 15f; // Interval for moving to a new point
+
+    /// <summary>
     /// starts FSM
     /// </summary>
     private void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
         currentState = "NoQuest";
         nextState = "NoQuest";
 
@@ -101,6 +120,11 @@ public class NPCQuest : Interactable
     {
         DialogueManager.instance.StartDialogue(noQuestDialogue);
         yield return new WaitUntil(() => !DialogueManager.instance.IsDisplayingDialogue());
+        while (currentState == "NoQuest")
+        {
+            MoveToRandomPoint(noQuestAreaMin, noQuestAreaMax);
+            yield return new WaitForSeconds(moveInterval);
+        }
     }
 
     /// <summary>
@@ -144,12 +168,34 @@ public class NPCQuest : Interactable
             yield return new WaitUntil(() => !DialogueManager.instance.IsDisplayingDialogue());
             GameManager.instance.AddReputation(10);
             reputationAwarded = true;
+            MoveToRandomPoint(questDoneAreaMin, questDoneAreaMax);
         }
         else
         {
             DialogueManager.instance.StartDialogue(new string[] { "Thank you again, but you already have your reward." });
             yield return new WaitUntil(() => !DialogueManager.instance.IsDisplayingDialogue());
         }
+        while (currentState == "QuestDone")
+        {
+            MoveToRandomPoint(questDoneAreaMin, questDoneAreaMax);
+            yield return new WaitForSeconds(moveInterval);
+        }
         nextState = "QuestDone";
+    }
+
+    /// <summary>
+    /// Move the NPC to a random point within the specified area
+    /// </summary>
+    /// <param name="areaMin"></param>
+    /// <param name="areaMax"></param>
+    private void MoveToRandomPoint(Transform areaMin, Transform areaMax)
+    {
+        Vector3 randomPoint = new Vector3(
+            Random.Range(areaMin.position.x, areaMax.position.x),
+            transform.position.y, // Maintain the current Y position
+            Random.Range(areaMin.position.z, areaMax.position.z)
+        );
+
+        agent.SetDestination(randomPoint);
     }
 }
