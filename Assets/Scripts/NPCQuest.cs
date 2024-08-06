@@ -42,7 +42,8 @@ public class NPCQuest : Interactable
     /// references for nav mesh
     /// </summary>
     private NavMeshAgent agent;
-    private float moveInterval = 15f; // Interval for moving to a new point
+    private float moveInterval = 10f; // Interval for moving to a new point
+    public Animator animator;
 
     /// <summary>
     /// starts FSM
@@ -65,6 +66,18 @@ public class NPCQuest : Interactable
         {
             currentState = nextState;
             SwitchState();
+        }
+
+        // Check if the NPC is moving and update the animator
+        if (agent.velocity.sqrMagnitude > 0)
+        {
+            animator.SetBool("isNPCIdle", false);
+            animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            animator.SetBool("isNPCIdle", true);
+            animator.SetBool("isWalking", false);
         }
     }
 
@@ -190,11 +203,8 @@ public class NPCQuest : Interactable
     /// <param name="areaMax"></param>
     private void MoveToRandomPoint(Transform areaMin, Transform areaMax)
     {
-        Vector3 randomPoint = new Vector3(
-            Random.Range(areaMin.position.x, areaMax.position.x),
-            transform.position.y, // Maintain the current Y position
-            Random.Range(areaMin.position.z, areaMax.position.z)
-        );
+        Vector3 randomPoint = new Vector3(Random.Range(areaMin.position.x, areaMax.position.x), transform.position.y, // Maintain the current Y position
+        Random.Range(areaMin.position.z, areaMax.position.z));
 
         agent.SetDestination(randomPoint);
     }
