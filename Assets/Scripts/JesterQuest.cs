@@ -1,15 +1,14 @@
 /*
  * Author: Muhammad Farhan
- * Date: 22/7/2024
- * Description: Finite State Machine for Innkeeper NPC Quest
+ * Date: 7/8/2024
+ * Description: Finite State Machine for Jester NPC Quest
  */
 using System.Collections;
 using System.Collections.Generic;
-using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class NPCQuest : Interactable
+public class JesterQuest : Interactable
 {
     /// <summary>
     /// strings to switch states
@@ -115,14 +114,7 @@ public class NPCQuest : Interactable
         }
         else if (currentState == "QuestAccepted")
         {
-            if (GameManager.instance.HasCollectible())
-            {
-                nextState = "QuestDone";
-            }
-            else
-            {
-                nextState = "QuestAccepted";
-            }
+            nextState = "QuestDone";
         }
         else if (currentState == "QuestDone")
         {
@@ -186,10 +178,11 @@ public class NPCQuest : Interactable
     /// <returns></returns>
     IEnumerator QuestStart()
     {
-        Debug.Log("Collect the thing");
+
         DialogueManager.instance.StartDialogue(questStartDialogue, this);
         yield return new WaitUntil(() => !DialogueManager.instance.IsDisplayingDialogue());
         nextState = "QuestAccepted";
+        SwitchState();
     }
 
     /// <summary>
@@ -198,15 +191,10 @@ public class NPCQuest : Interactable
     /// <returns></returns>
     IEnumerator QuestAccepted()
     {
-        if (GameManager.instance.HasCollectible())
-        {
-            nextState = "QuestDone";
-        }
-        else
-        {
-            DialogueManager.instance.StartDialogue(questAcceptedDialogue, this);
-            yield return new WaitUntil(() => !DialogueManager.instance.IsDisplayingDialogue());
-        }
+        DialogueManager.instance.StartDialogue(questAcceptedDialogue, this);
+        yield return new WaitUntil(() => !DialogueManager.instance.IsDisplayingDialogue());
+        nextState = "QuestDone";
+        SwitchState();
     }
 
     /// <summary>
@@ -225,7 +213,7 @@ public class NPCQuest : Interactable
         }
         else
         {
-            DialogueManager.instance.StartDialogue(new string[] { "Thank you again, but you already have your reward." }, this);
+            DialogueManager.instance.StartDialogue(new string[] { "I gave you my best material. It's downhill from here." }, this);
             yield return new WaitUntil(() => !DialogueManager.instance.IsDisplayingDialogue());
         }
         while (currentState == "QuestDone")

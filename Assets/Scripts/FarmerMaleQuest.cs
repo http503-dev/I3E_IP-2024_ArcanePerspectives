@@ -1,15 +1,14 @@
 /*
  * Author: Muhammad Farhan
- * Date: 22/7/2024
- * Description: Finite State Machine for Innkeeper NPC Quest
+ * Date: 7/8/2024
+ * Description: Finite State Machine for Farmer Male NPC
  */
 using System.Collections;
 using System.Collections.Generic;
-using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class NPCQuest : Interactable
+public class FarmerMaleQuest : Interactable
 {
     /// <summary>
     /// strings to switch states
@@ -115,7 +114,7 @@ public class NPCQuest : Interactable
         }
         else if (currentState == "QuestAccepted")
         {
-            if (GameManager.instance.HasCollectible())
+            if (GameManager.instance.HasPickaxe())
             {
                 nextState = "QuestDone";
             }
@@ -198,7 +197,7 @@ public class NPCQuest : Interactable
     /// <returns></returns>
     IEnumerator QuestAccepted()
     {
-        if (GameManager.instance.HasCollectible())
+        if (GameManager.instance.HasPickaxe())
         {
             nextState = "QuestDone";
         }

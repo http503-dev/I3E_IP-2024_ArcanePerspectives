@@ -1,16 +1,16 @@
 /*
  * Author: Muhammad Farhan
- * Date: 22/7/2024
- * Description: Script related to the collectible
+ * Date: 7/8/2024
+ * Description: Script related to the pickaxe collectible
  */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collectible : Interactable
+public class PickaxeItem : Interactable
 {
     /// <summary>
-    /// sound for picking up collectible
+    /// sound for picking up pickaxe
     /// </summary>
     [SerializeField]
     private AudioClip collectAudio;
@@ -18,7 +18,7 @@ public class Collectible : Interactable
     /// <summary>
     /// bool to determine whether collectible has been collected
     /// </summary>
-    public bool hasCollectible = false;
+    public bool hasPickaxe = false;
 
     /// <summary>
     /// function for what happens on interacting
@@ -27,8 +27,8 @@ public class Collectible : Interactable
     public override void Interact(Player thePlayer)
     {
         base.Interact(thePlayer);
-        hasCollectible = true;
-        GameManager.instance.SetHasCollectible(hasCollectible);
+        hasPickaxe = true;
+        GameManager.instance.SetHasPickaxe(hasPickaxe);
         Destroy(gameObject);
         if (collectAudio != null)
         {

@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public int reputation;
     public bool hasCollectible = false;
+    public bool hasPickaxe = false;
 
     /// <summary>
     /// player's health attributes
@@ -226,22 +227,41 @@ public class GameManager : MonoBehaviour
     }
 
     /// <summary>
-    /// function to determine if player has pickaxe
+    /// function to determine if player has collectible
     /// </summary>
     /// <param name="collectibleValue"></param>
     public void SetHasCollectible(bool collectibleValue)
     {
         hasCollectible = collectibleValue;
-        inventoryText.text += "Collectible";
     }
 
+
     /// <summary>
-    /// function to return bool value of crystal
+    /// function to return bool value of collectible
     /// </summary>
     /// <returns></returns>
     public bool HasCollectible()
     {
         return hasCollectible;
+    }
+
+    /// <summary>
+    /// function to determine if player has pickaxe
+    /// </summary>
+    /// <param name="pickValue"></param>
+    public void SetHasPickaxe(bool pickValue)
+    {
+        hasPickaxe = pickValue;
+        inventoryText.text = "Pickaxe"; 
+    }
+
+    /// <summary>
+    /// function to return bool value of pickaxe
+    /// </summary>
+    /// <returns></returns>
+    public bool HasPickaxe()
+    {
+        return hasPickaxe;
     }
 
     /// <summary>

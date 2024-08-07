@@ -23,6 +23,8 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;
     public bool isDisplayingDialogue = false;
 
+    private Interactable currentNPC;
+
     private void Awake()
     {
         if (instance == null)
@@ -37,7 +39,7 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
-    public void StartDialogue(string[] dialogueLines)
+    public void StartDialogue(string[] dialogueLines, Interactable npc)
     {
         Debug.Log("Starting Dialogue");
         sentences.Clear();
@@ -47,11 +49,25 @@ public class DialogueManager : MonoBehaviour
         }
         if (firstPersonController != null)
         {
-            firstPersonController.enabled = false; // Disable player movement
+            firstPersonController.enabled = false;
         }
         if (playerInput != null)
         {
-            playerInput.enabled = false; // Disable player input
+            playerInput.enabled = false;
+        }
+
+        currentNPC = npc;
+        if (npc is NPCQuest)
+        {
+            ((NPCQuest)npc).ForceIdleState(true);
+        }
+        else if (npc is JesterQuest)
+        {
+            ((JesterQuest)npc).ForceIdleState(true);
+        }
+        else if (npc is FarmerMaleQuest)
+        {
+            ((FarmerMaleQuest)npc).ForceIdleState(true);
         }
 
         DisplayNextSentence();
@@ -79,13 +95,30 @@ public class DialogueManager : MonoBehaviour
         isDisplayingDialogue = false;
         if (firstPersonController != null)
         {
-            firstPersonController.enabled = true; // Re-enable player movement
+            firstPersonController.enabled = true;
         }
         if (playerInput != null)
         {
-            playerInput.enabled = true; // Re-enable player input
+            playerInput.enabled = true;
         }
         Debug.Log("Ending Dialogue");
+
+        if (currentNPC != null)
+        {
+            if (currentNPC is NPCQuest)
+            {
+                ((NPCQuest)currentNPC).ForceIdleState(false);
+            }
+            else if (currentNPC is JesterQuest)
+            {
+                ((JesterQuest)currentNPC).ForceIdleState(false);
+            }
+            else if (currentNPC is FarmerMaleQuest)
+            {
+                ((FarmerMaleQuest)currentNPC).ForceIdleState(false);
+            }
+            currentNPC = null;
+        }
     }
 
     public bool IsDisplayingDialogue()

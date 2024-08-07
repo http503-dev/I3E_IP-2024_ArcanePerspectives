@@ -36,11 +36,17 @@ public class Checkpoint : Interactable
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
-        UIManager.instance.ShowInteractPrompt("Hit 'E' to interact");
+        if (other.CompareTag("Player"))
+        {
+            UIManager.instance.ShowInteractPrompt("Hit 'E' to interact");
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        UIManager.instance.HideInteractPrompt();
+        if (other.CompareTag("Player"))
+        {
+            UIManager.instance.HideInteractPrompt();
+        }
     }
 }

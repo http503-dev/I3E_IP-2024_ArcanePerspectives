@@ -40,4 +40,14 @@ public class Interactable : MonoBehaviour
         }
         Debug.Log(gameObject.name + " was interacted with");
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        BossAI bossHealth = collision.gameObject.GetComponent<BossAI>();
+        if (bossHealth != null)
+        {
+            bossHealth.TakeDamage(20);
+            Destroy(gameObject); // Destroy the projectile after it hits the boss
+        }
+    }
 }

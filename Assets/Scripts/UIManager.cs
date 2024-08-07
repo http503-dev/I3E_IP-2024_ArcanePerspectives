@@ -27,6 +27,8 @@ public class UIManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            interactBackground.SetActive(false);
+            interactPrompt.text = null;
         }
         else
         {
