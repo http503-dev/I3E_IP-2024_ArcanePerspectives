@@ -13,7 +13,7 @@ public class BossProjectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        BossHealth bossHealth = collision.gameObject.GetComponent<BossHealth>();
+        BossAI bossHealth = collision.gameObject.GetComponent<BossAI>();
         if (bossHealth != null)
         {
             bossHealth.TakeDamage(damage);

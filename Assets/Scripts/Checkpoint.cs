@@ -26,7 +26,8 @@ public class Checkpoint : Interactable
             AudioManager.instance.PlaySFX(collectAudio, transform.position);
         }
         UIManager.instance.ShowInteractPrompt("Checkpoint set. Health restored!");
-        GameManager.SetCheckpoint(transform.position);
+        Vector3 offsetPosition = transform.position + new Vector3(2.0f, 0.0f, 0.0f);
+        GameManager.SetCheckpoint(offsetPosition);
     }
 
     /// <summary>
