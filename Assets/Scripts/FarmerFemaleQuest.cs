@@ -223,7 +223,7 @@ public class FarmerFemaleQuest : Interactable
         }
         else
         {
-            DialogueManager.instance.StartDialogue(new string[] { "Thank you again, but you already have your reward." }, this);
+            DialogueManager.instance.StartDialogue(new string[] { "Thanks, but I have nothing else for you." }, this);
             yield return new WaitUntil(() => !DialogueManager.instance.IsDisplayingDialogue());
         }
         while (currentState == "QuestDone")

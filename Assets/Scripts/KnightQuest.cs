@@ -225,7 +225,7 @@ public class KnightQuest : Interactable
         }
         else
         {
-            DialogueManager.instance.StartDialogue(new string[] { "Thank you again, but you already have your reward." }, this);
+            DialogueManager.instance.StartDialogue(new string[] { "Keep on keeping on." }, this);
             yield return new WaitUntil(() => !DialogueManager.instance.IsDisplayingDialogue());
         }
         while (currentState == "QuestDone")

@@ -49,7 +49,6 @@ public class GameManager : MonoBehaviour
     /// ui stuff
     /// </summary>
     public TextMeshProUGUI repText;
-    public TextMeshProUGUI inventoryText;
     public Slider healthSlider;
     public GameObject deathScreenUI;
     public GameObject pauseMenuUI;
@@ -196,6 +195,7 @@ public class GameManager : MonoBehaviour
             }
 
             currentHealth = maxHealth;
+            reputation = 0;
             UpdateHealthUI();
             deathScreenUI.SetActive(false);
             playerUI.SetActive(true);
@@ -220,8 +220,10 @@ public class GameManager : MonoBehaviour
     public void ResetGameState()
     {
         currentHealth = maxHealth;
-        inventoryText.text = null;
         hasCollectible = false;
+        hasPickaxe = false;
+        isScaledUp = false;
+        isDestroyed = false;
 
         lastCheckpoint = initialSpawn;
         player.transform.position = initialSpawn;
@@ -254,7 +256,6 @@ public class GameManager : MonoBehaviour
     public void SetHasPickaxe(bool pickValue)
     {
         hasPickaxe = pickValue;
-        inventoryText.text = "Pickaxe"; 
     }
 
     /// <summary>
@@ -310,7 +311,16 @@ public class GameManager : MonoBehaviour
     public void AddReputation(int amount)
     {
         reputation += amount;
-        repText.text += reputation;
+        repText.text = reputation.ToString();
         Debug.Log("Reputation increased by " + amount + ". Total reputation: " + reputation);
+    }
+
+    /// <summary>
+    /// function to return reputation
+    /// </summary>
+    /// <returns></returns>
+    public int GetReputation()
+    {
+        return reputation;
     }
 }

@@ -26,20 +26,8 @@ public class Checkpoint : Interactable
             AudioManager.instance.PlaySFX(collectAudio, transform.position);
         }
         UIManager.instance.ShowInteractPrompt("Checkpoint set. Health restored!");
-        Vector3 offsetPosition = transform.position + new Vector3(2.0f, 0.0f, 0.0f);
+        Vector3 offsetPosition = transform.position + new Vector3(-2.0f, 0.0f, 0.0f);
         GameManager.SetCheckpoint(offsetPosition);
-    }
-
-    /// <summary>
-    /// trigger enter/exit to show/hide prompts
-    /// </summary>
-    /// <param name="other"></param>
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            UIManager.instance.ShowInteractPrompt("Hit 'E' to interact");
-        }
     }
 
     private void OnTriggerExit(Collider other)

@@ -24,7 +24,7 @@ public class GuardFSM : MonoBehaviour
     public float chaseDistance = 10f;
     public float attackDistance = 2f;
     public float loseSightDistance = 15f;
-    public int reputationThreshold = 10; // to change
+    public int reputationThreshold = 100;
     public float attackCooldown = 1.5f;
     public NavMeshAgent agent;
     public Animator animator;
