@@ -73,6 +73,10 @@ public class DialogueManager : MonoBehaviour
         {
             ((FarmerFemaleQuest)npc).ForceIdleState(true);
         }
+        else if (npc is KnightQuest)
+        {
+            ((KnightQuest)npc).ForceIdleState(true);
+        }
 
         DisplayNextSentence();
     }
@@ -125,7 +129,10 @@ public class DialogueManager : MonoBehaviour
             {
                 ((FarmerFemaleQuest)currentNPC).ForceIdleState(false);
             }
-            currentNPC = null;
+            else if (currentNPC is KnightQuest)
+            {
+                ((KnightQuest)currentNPC).ForceIdleState(false);
+            }
             currentNPC = null;
         }
     }

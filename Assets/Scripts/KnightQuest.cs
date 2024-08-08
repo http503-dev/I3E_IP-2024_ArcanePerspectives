@@ -1,14 +1,16 @@
 /*
- * Author: Jarene Goh
+ * Author: Johnathan wang
  * Date: 8/8/2024
- * Description: Finite State Machine for Farmer Female NPC
+ * Description: Finite State Machine for Knight NPC
  */
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class FarmerFemaleQuest : Interactable
+public class KnightQuest : Interactable
 {
     /// <summary>
     /// strings to switch states
@@ -114,7 +116,7 @@ public class FarmerFemaleQuest : Interactable
         }
         else if (currentState == "QuestAccepted")
         {
-            if (GameManager.instance.HasScaledUp())
+            if (GameManager.instance.IsDestroyed())
             {
                 nextState = "QuestDone";
             }
@@ -196,7 +198,7 @@ public class FarmerFemaleQuest : Interactable
     /// <returns></returns>
     IEnumerator QuestAccepted()
     {
-        if (GameManager.instance.HasScaledUp())
+        if (GameManager.instance.IsDestroyed())
         {
             nextState = "QuestDone";
         }
