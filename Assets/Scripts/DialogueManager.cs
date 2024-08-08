@@ -69,6 +69,10 @@ public class DialogueManager : MonoBehaviour
         {
             ((FarmerMaleQuest)npc).ForceIdleState(true);
         }
+        else if (npc is FarmerFemaleQuest)
+        {
+            ((FarmerFemaleQuest)npc).ForceIdleState(true);
+        }
 
         DisplayNextSentence();
     }
@@ -117,6 +121,11 @@ public class DialogueManager : MonoBehaviour
             {
                 ((FarmerMaleQuest)currentNPC).ForceIdleState(false);
             }
+            else if (currentNPC is FarmerFemaleQuest)
+            {
+                ((FarmerFemaleQuest)currentNPC).ForceIdleState(false);
+            }
+            currentNPC = null;
             currentNPC = null;
         }
     }

@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour
     public int reputation;
     public bool hasCollectible = false;
     public bool hasPickaxe = false;
+    public bool isScaledUp = false;
+    public bool isDestroyed = false;
 
     /// <summary>
     /// player's health attributes
@@ -262,6 +264,43 @@ public class GameManager : MonoBehaviour
     public bool HasPickaxe()
     {
         return hasPickaxe;
+    }
+
+    /// <summary>
+    /// function to determine if well has been scaled up
+    /// </summary>
+    /// <param name="scaledUpValue"></param>
+    public void SetScaledUp(bool scaledUpValue)
+    {
+        isScaledUp = scaledUpValue;
+        Debug.Log(scaledUpValue);
+    }
+
+    /// <summary>
+    /// function to return bool value of well
+    /// </summary>
+    /// <returns></returns>
+    public bool HasScaledUp()
+    {
+        return isScaledUp;
+    }
+
+    /// <summary>
+    /// function to determine if shield has been destroyed
+    /// </summary>
+    /// <param name="destroyed"></param>
+    public void SetDestroyed(bool destroyed)
+    {
+        isDestroyed = destroyed;
+    }
+
+    /// <summary>
+    /// function to return bool value of shield
+    /// </summary>
+    /// <returns></returns>
+    public bool IsDestroyed()
+    {
+        return isDestroyed;
     }
 
     /// <summary>
