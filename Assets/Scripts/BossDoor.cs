@@ -1,3 +1,8 @@
+/*
+ * Author: Muhammad Farhan
+ * Date: 8/8/2024
+ * Description: Script related to entering the boss room
+ */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
