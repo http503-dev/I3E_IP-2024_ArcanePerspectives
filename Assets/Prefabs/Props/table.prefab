@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5273711057505784258}
   - component: {fileID: 5114923732654357052}
   - component: {fileID: 4409786017882337174}
+  - component: {fileID: 2653189163553636744}
   m_Layer: 6
   m_Name: table
   m_TagString: Throwable
@@ -134,3 +135,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2653189163553636744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5921952257280126999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38b5eff0e69ed24409c39258524b2cdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
