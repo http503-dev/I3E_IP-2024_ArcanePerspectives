@@ -9,19 +9,21 @@ using UnityEngine;
 
 public class BossProjectile : MonoBehaviour
 {
-    public float damage = 20f;
 
     private void OnCollisionEnter(Collision collision)
     {
+        float scale = transform.localScale.magnitude; // Use magnitude to get a single value from the scale vector
+        float calculatedDamage = scale * 10f;
+
         BossAI bossHealth = collision.gameObject.GetComponent<BossAI>();
         if (bossHealth != null)
         {
-            bossHealth.TakeDamage(damage);
+            bossHealth.TakeDamage(calculatedDamage);
             Destroy(gameObject); // Destroy the projectile after it hits the boss
         }
         else if (collision.gameObject.CompareTag("Player"))
         {
-            GameManager.instance.TakeDamage(damage);
+            GameManager.instance.TakeDamage(calculatedDamage);
             Destroy(gameObject); // Destroy the projectile after it hits the player
         }
         else

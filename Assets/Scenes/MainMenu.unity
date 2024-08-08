@@ -2536,11 +2536,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 7321095605643180270, guid: e33ce3d2052654dd2874223b0a0dd4cf,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 002e3b2291944408bb5f9b911834c681, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2324a88ed2d15d34ba809bfe628958b3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3737,7 +3737,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36dce27479eae4099bd409e858951b70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultMusicClip: {fileID: 8300000, guid: 2324a88ed2d15d34ba809bfe628958b3, type: 3}
+  bossFightMusicClip: {fileID: 8300000, guid: f642630b625a3cb4880d59e8b6bf00fa, type: 3}
   audioMixer: {fileID: 24100000, guid: e33ce3d2052654dd2874223b0a0dd4cf, type: 2}
+  musicSource: {fileID: 1016521918}
 --- !u!4 &1602343487
 Transform:
   m_ObjectHideFlags: 0

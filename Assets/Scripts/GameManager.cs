@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
     public bool hasPickaxe = false;
     public bool isScaledUp = false;
     public bool isDestroyed = false;
+    public bool bossDefeated = false;
 
     /// <summary>
     /// player's health attributes
@@ -224,6 +225,7 @@ public class GameManager : MonoBehaviour
         hasPickaxe = false;
         isScaledUp = false;
         isDestroyed = false;
+        bossDefeated = false;
 
         lastCheckpoint = initialSpawn;
         player.transform.position = initialSpawn;
@@ -302,6 +304,16 @@ public class GameManager : MonoBehaviour
     public bool IsDestroyed()
     {
         return isDestroyed;
+    }
+
+    public void BossDefeated()
+    {
+        bossDefeated = true;
+    }
+
+    public bool IsBossDefeated()
+    {
+        return bossDefeated;
     }
 
     /// <summary>

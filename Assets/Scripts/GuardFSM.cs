@@ -10,7 +10,12 @@ using UnityEngine.AI;
 
 public class GuardFSM : MonoBehaviour
 {
+    /// <summary>
+    /// to set audio clips
+    /// </summary>
     [SerializeField] private AudioClip hurtAudio;
+    [SerializeField] private AudioClip deathAudio;
+
     /// <summary>
     /// strings to switch states
     /// </summary>
@@ -176,8 +181,11 @@ public class GuardFSM : MonoBehaviour
         animator.SetBool("isAttacking", false);
         animator.SetBool("isDead", true);
 
-        Debug.Log("Guard is dead");
         agent.isStopped = true;
+        if (deathAudio != null)
+        {
+            AudioManager.instance.PlaySFX(deathAudio, transform.position);
+        }
         yield return new WaitForSeconds(4f); // Wait for the death animation to play out
         Destroy(gameObject);
     }

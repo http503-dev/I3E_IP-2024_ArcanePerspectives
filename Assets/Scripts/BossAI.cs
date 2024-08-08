@@ -12,6 +12,13 @@ using UnityEngine.UI;
 public class BossAI : MonoBehaviour
 {
     /// <summary>
+    /// to set audio clips
+    /// </summary>
+    [SerializeField] private AudioClip hurtAudio;
+    [SerializeField] private AudioClip deathAudio;
+    [SerializeField] private AudioClip attackAudio;
+
+    /// <summary>
     /// references for boss 'stats' and where/what he throws
     /// </summary>
     public float attackDistance = 20f;
@@ -109,6 +116,11 @@ public class BossAI : MonoBehaviour
     {
         navMeshAgent.isStopped = true; // Stop moving when attacking
 
+        if (attackAudio != null)
+        {
+            AudioManager.instance.PlaySFX(attackAudio, transform.position);
+        }
+
         // Wait for the throw animation to reach the throwing point
         yield return new WaitForSeconds(1.8f); // Adjust based on your animation timing
 
@@ -145,6 +157,10 @@ public class BossAI : MonoBehaviour
 
         if (currentHealth > 0)
         {
+            if (hurtAudio != null)
+            {
+                AudioManager.instance.PlaySFX(hurtAudio, transform.position);
+            }
             StopAllCoroutines(); // Stop any ongoing actions (e.g., attack)
             isHurt = true;
             animator.SetBool("isHurt", true);
@@ -165,6 +181,10 @@ public class BossAI : MonoBehaviour
     /// </summary>
     private void Die()
     {
+        if (deathAudio != null)
+        {
+            AudioManager.instance.PlaySFX(deathAudio, transform.position);
+        }
         isDead = true;
         animator.SetBool("isDead", true);
         animator.SetBool("isAttacking", false);
@@ -173,6 +193,8 @@ public class BossAI : MonoBehaviour
         healthBarUI.SetActive(false);
         navMeshAgent.isStopped = true;
         StartCoroutine(WaitForDeathAnimation());
+
+        GameManager.instance.BossDefeated();
     }
 
     private IEnumerator ResumeAfterHurt()

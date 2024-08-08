@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 017d6daa20b5cad4eb126744fcd77c11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectAudio: {fileID: 8300000, guid: 1987b2c5532d51d4b8b345a2866ec574, type: 3}
+  collectAudio: {fileID: 8300000, guid: f46c6caa4cc132b4ba5782cd8d8d0d13, type: 3}
 --- !u!65 &5870863508617465710
 BoxCollider:
   m_ObjectHideFlags: 0

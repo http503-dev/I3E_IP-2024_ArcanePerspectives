@@ -20,6 +20,7 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public TextMeshProUGUI interactPrompt;
     public GameObject interactBackground;
+    public GameObject congrats;
 
     private void Awake()
     {
@@ -53,5 +54,18 @@ public class UIManager : MonoBehaviour
     {
         interactPrompt.text = null;
         interactBackground.SetActive(false);
+    }
+
+    /// <summary>
+    /// function to show congrats message
+    /// </summary>
+    public void ShowCongrats()
+    {
+        congrats.SetActive(true);
+    }
+
+    public void HideCongrats()
+    {
+        congrats.SetActive(false);
     }
 }

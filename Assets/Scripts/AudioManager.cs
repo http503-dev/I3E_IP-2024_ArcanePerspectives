@@ -9,9 +9,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
+    /// <summary>
+    /// music
+    /// </summary>
+    public AudioClip defaultMusicClip;
+    public AudioClip bossFightMusicClip;
+
     /// <summary>
     /// references audio manager
     /// </summary>
@@ -21,6 +28,7 @@ public class AudioManager : MonoBehaviour
     /// references audio mixer
     /// </summary>
     public AudioMixer audioMixer;
+    public AudioSource musicSource;
 
     private void Awake()
     {
@@ -43,6 +51,13 @@ public class AudioManager : MonoBehaviour
 
         SetMusicVolume(musicVolume);
         SetSFXVolume(sfxVolume);
+
+        // Subscribe to scene change events
+        SceneManager.sceneLoaded += OnSceneLoaded;
+
+        // Play initial music
+        ChangeMusic(defaultMusicClip);
+
     }
 
     /// <summary>
@@ -88,5 +103,27 @@ public class AudioManager : MonoBehaviour
     {
         float sfxVolume = PlayerPrefs.GetFloat("SFXVolume", 0.75f);
         AudioSource.PlayClipAtPoint(clip, position, sfxVolume);
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "BossCastle") // Replace with your actual boss fight scene name
+        {
+            ChangeMusic(bossFightMusicClip); // Replace with the actual AudioClip for the boss fight
+        }
+        else
+        {
+            ChangeMusic(defaultMusicClip); // Replace with the default AudioClip for other scenes
+        }
+    }
+
+    public void ChangeMusic(AudioClip newMusic)
+    {
+        if (musicSource.clip != newMusic)
+        {
+            musicSource.Stop();
+            musicSource.clip = newMusic;
+            musicSource.Play();
+        }
     }
 }

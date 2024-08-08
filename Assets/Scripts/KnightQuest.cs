@@ -13,6 +13,11 @@ using UnityEngine.AI;
 public class KnightQuest : Interactable
 {
     /// <summary>
+    /// to set quest audio
+    /// </summary>
+    [SerializeField] private AudioClip questAudio;
+
+    /// <summary>
     /// strings to switch states
     /// </summary>
     string currentState;
@@ -205,6 +210,10 @@ public class KnightQuest : Interactable
         else
         {
             DialogueManager.instance.StartDialogue(questAcceptedDialogue, this);
+            if (questAudio != null)
+            {
+                AudioManager.instance.PlaySFX(questAudio, transform.position);
+            }
             yield return new WaitUntil(() => !DialogueManager.instance.IsDisplayingDialogue());
         }
     }
@@ -221,6 +230,10 @@ public class KnightQuest : Interactable
             yield return new WaitUntil(() => !DialogueManager.instance.IsDisplayingDialogue());
             GameManager.instance.AddReputation(20);
             reputationAwarded = true;
+            if (questAudio != null)
+            {
+                AudioManager.instance.PlaySFX(questAudio, transform.position);
+            }
             MoveToRandomPoint(questDoneAreaMin, questDoneAreaMax);
         }
         else
