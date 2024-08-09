@@ -25,6 +25,9 @@ public class PauseMenu : MonoBehaviour
     public Slider musicSlider;
     public Slider sfxSlider;
 
+    /// <summary>
+    /// checks to see if 'escape' is hit
+    /// </summary>
     void Update()
     {
         // Check for the Escape key press to toggle pause

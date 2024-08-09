@@ -11,7 +11,15 @@ using UnityEngine;
 
 public class ShieldItem : MonoBehaviour
 {
+    /// <summary>
+    /// bool to check if shield has been destroyed
+    /// </summary>
     public bool isDestroyed = false;
+
+    /// <summary>
+    /// logic for when it collides with throwable item
+    /// </summary>
+    /// <param name="collision"></param>
 
     private void OnCollisionEnter(Collision collision)
     {

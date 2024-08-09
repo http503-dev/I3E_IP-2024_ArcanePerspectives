@@ -36,6 +36,9 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    /// <summary>
+    /// starts volume settings
+    /// </summary>
     private void Start()
     {
         // Initialize sliders with saved values

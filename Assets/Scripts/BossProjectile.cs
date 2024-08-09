@@ -9,11 +9,14 @@ using UnityEngine;
 
 public class BossProjectile : MonoBehaviour
 {
-
+    /// <summary>
+    /// does damage to boss or player on collision
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionEnter(Collision collision)
     {
         float scale = transform.localScale.magnitude; // Use magnitude to get a single value from the scale vector
-        float calculatedDamage = scale * 10f;
+        float calculatedDamage = scale * 5f;
 
         BossAI bossHealth = collision.gameObject.GetComponent<BossAI>();
         if (bossHealth != null)

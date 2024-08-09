@@ -10,7 +10,7 @@ using UnityEngine;
 public class Congratulations : Interactable
 {
     /// <summary>
-    /// plays audio and shows congratulatory message
+    /// shows congratulatory message
     /// </summary>
     /// <param name="thePlayer"></param>
     public override void Interact(Player thePlayer)

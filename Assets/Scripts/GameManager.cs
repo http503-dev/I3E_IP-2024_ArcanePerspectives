@@ -218,6 +218,9 @@ public class GameManager : MonoBehaviour
         Destroy(gameObject);
     }
 
+    /// <summary>
+    /// function to reset the game on restart
+    /// </summary>
     public void ResetGameState()
     {
         currentHealth = maxHealth;
@@ -306,11 +309,18 @@ public class GameManager : MonoBehaviour
         return isDestroyed;
     }
 
+    /// <summary>
+    /// function to determine if boss has been defeated
+    /// </summary>
     public void BossDefeated()
     {
         bossDefeated = true;
     }
 
+    /// <summary>
+    /// function to return bool value of shield
+    /// </summary>
+    /// <returns></returns>
     public bool IsBossDefeated()
     {
         return bossDefeated;

@@ -20909,7 +20909,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4492970d02c3cc4a9845679b80f7d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escapeAudio: {fileID: 8300000, guid: 002e3b2291944408bb5f9b911834c681, type: 3}
 --- !u!114 &2126440486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20922,7 +20921,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4492970d02c3cc4a9845679b80f7d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escapeAudio: {fileID: 8300000, guid: 002e3b2291944408bb5f9b911834c681, type: 3}
 --- !u!54 &2126440487
 Rigidbody:
   m_ObjectHideFlags: 0

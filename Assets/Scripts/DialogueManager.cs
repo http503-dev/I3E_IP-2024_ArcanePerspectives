@@ -12,19 +12,41 @@ using UnityEngine.InputSystem;
 
 public class DialogueManager : MonoBehaviour
 {
+    /// <summary>
+    /// references dialogue manager
+    /// </summary>
     public static DialogueManager instance;
 
+    /// <summary>
+    /// ui elements
+    /// </summary>
     public GameObject dialogueBox;
     public TextMeshProUGUI dialogueText;
 
-    public FirstPersonController firstPersonController; // Reference to the FirstPersonController script
-    public PlayerInput playerInput; // Reference to the PlayerInput script
+    /// <summary>
+    /// references FirstPersonController/PlayerInput script
+    /// </summary>
+    public FirstPersonController firstPersonController;
+    public PlayerInput playerInput;
 
+    /// <summary>
+    /// references dialogue
+    /// </summary>
     private Queue<string> sentences;
+
+    /// <summary>
+    /// bool to check if dialogue is displaying
+    /// </summary>
     public bool isDisplayingDialogue = false;
 
+    /// <summary>
+    /// current npc
+    /// </summary>
     private Interactable currentNPC;
 
+    /// <summary>
+    /// initializes dialogue manager
+    /// </summary>
     private void Awake()
     {
         if (instance == null)
@@ -39,6 +61,11 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
+    /// <summary>
+    /// logic to start dialgue sequence
+    /// </summary>
+    /// <param name="dialogueLines"></param>
+    /// <param name="npc"></param>
     public void StartDialogue(string[] dialogueLines, Interactable npc)
     {
         Debug.Log("Starting Dialogue");
@@ -81,6 +108,9 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
     }
 
+    /// <summary>
+    /// function to show dialogue
+    /// </summary>
     public void DisplayNextSentence()
     {
         if (sentences.Count == 0)
@@ -96,6 +126,9 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("Displaying sentence: " + sentence);
     }
 
+    /// <summary>
+    /// function to end dialogue sequence
+    /// </summary>
     public void EndDialogue()
     {
         dialogueBox.SetActive(false);
@@ -137,11 +170,18 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// bool to check if dialogue is showing
+    /// </summary>
+    /// <returns></returns>
     public bool IsDisplayingDialogue()
     {
         return isDisplayingDialogue;
     }
 
+    /// <summary>
+    /// checks if space is hit to progress dialogue
+    /// </summary>
     private void Update()
     {
         if (isDisplayingDialogue && Input.GetKeyDown(KeyCode.Space)) // Assuming Space advances dialogue

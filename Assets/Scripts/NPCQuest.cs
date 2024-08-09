@@ -137,6 +137,10 @@ public class NPCQuest : Interactable
         SwitchState();
     }
 
+    /// <summary>
+    /// gets dialogue for current state
+    /// </summary>
+    /// <returns></returns>
     private string[] GetDialogueForCurrentState()
     {
         if (currentState == "NoQuest")
@@ -157,6 +161,11 @@ public class NPCQuest : Interactable
         }
         return new string[] { };
     }
+
+    /// <summary>
+    /// function to force npc to idle while talking
+    /// </summary>
+    /// <param name="idle"></param>
     public void ForceIdleState(bool idle)
     {
         forceIdle = idle;

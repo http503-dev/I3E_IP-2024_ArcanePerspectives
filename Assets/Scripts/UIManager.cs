@@ -22,6 +22,9 @@ public class UIManager : MonoBehaviour
     public GameObject interactBackground;
     public GameObject congrats;
 
+    /// <summary>
+    /// intialize ui manager
+    /// </summary>
     private void Awake()
     {
         if (instance == null)
@@ -64,6 +67,9 @@ public class UIManager : MonoBehaviour
         congrats.SetActive(true);
     }
 
+    /// <summary>
+    /// function to hide congrats message
+    /// </summary>
     public void HideCongrats()
     {
         congrats.SetActive(false);

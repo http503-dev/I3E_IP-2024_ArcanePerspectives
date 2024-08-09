@@ -25,11 +25,14 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
 
     /// <summary>
-    /// references audio mixer
+    /// references audio mixer/source
     /// </summary>
     public AudioMixer audioMixer;
     public AudioSource musicSource;
 
+    /// <summary>
+    /// initialize audio manager
+    /// </summary>
     private void Awake()
     {
         if (instance == null)
@@ -43,6 +46,9 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// sets audio at start
+    /// </summary>
     private void Start()
     {
         // Load saved volume settings
@@ -105,6 +111,11 @@ public class AudioManager : MonoBehaviour
         AudioSource.PlayClipAtPoint(clip, position, sfxVolume);
     }
 
+    /// <summary>
+    /// function to check if in boss scene
+    /// </summary>
+    /// <param name="scene"></param>
+    /// <param name="mode"></param>
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if (scene.name == "BossCastle") // Replace with your actual boss fight scene name
@@ -117,6 +128,10 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// function to change music
+    /// </summary>
+    /// <param name="newMusic"></param>
     public void ChangeMusic(AudioClip newMusic)
     {
         if (musicSource.clip != newMusic)

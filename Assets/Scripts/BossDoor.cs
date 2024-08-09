@@ -10,8 +10,15 @@ using UnityEngine.SceneManagement;
 
 public class BossDoor : Interactable
 {
+    /// <summary>
+    /// required rep to enter castle
+    /// </summary>
     public int requiredRep = 100;
 
+    /// <summary>
+    /// trigger to show ui elements
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -27,6 +34,10 @@ public class BossDoor : Interactable
         }
     }
     
+    /// <summary>
+    /// hides ui elements after exiting trigger
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -35,6 +46,10 @@ public class BossDoor : Interactable
         }
     }
 
+    /// <summary>
+    /// function to change scene on interact
+    /// </summary>
+    /// <param name="thePlayer"></param>
     public override void Interact(Player thePlayer)
     {
         base.Interact(thePlayer);

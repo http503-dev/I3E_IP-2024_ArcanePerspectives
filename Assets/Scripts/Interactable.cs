@@ -41,10 +41,14 @@ public class Interactable : MonoBehaviour
         Debug.Log(gameObject.name + " was interacted with");
     }
 
+    /// <summary>
+    /// logic for use in boss fight
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionEnter(Collision collision)
     {
         float scale = transform.localScale.magnitude; // Use magnitude to get a single value from the scale vector
-        float calculatedDamage = scale * 10f;
+        float calculatedDamage = scale * 5f;
 
         BossAI bossHealth = collision.gameObject.GetComponent<BossAI>();
         if (bossHealth != null)

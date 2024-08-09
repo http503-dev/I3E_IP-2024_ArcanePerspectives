@@ -30,6 +30,10 @@ public class Checkpoint : Interactable
         GameManager.SetCheckpoint(offsetPosition);
     }
 
+    /// <summary>
+    /// hides ui elements
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))

@@ -27,11 +27,14 @@ public class BossAI : MonoBehaviour
     public float attackCooldown = 7f;
     public GameObject projectilePrefab;
     public Transform throwPoint;
+    private Animator animator;
 
+    /// <summary>
+    /// references for nav mesh
+    /// </summary>
     private float nextAttackTime;
     private NavMeshAgent navMeshAgent;
     private Transform player;
-    private Animator animator;
 
     /// <summary>
     /// references boss health/ ui elements
@@ -112,6 +115,10 @@ public class BossAI : MonoBehaviour
         StartCoroutine(PerformAttack());
     }
 
+    /// <summary>
+    /// coroutine for performing attacks
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator PerformAttack()
     {
         navMeshAgent.isStopped = true; // Stop moving when attacking
@@ -197,6 +204,10 @@ public class BossAI : MonoBehaviour
         GameManager.instance.BossDefeated();
     }
 
+    /// <summary>
+    /// coroutine for playing hurt animation
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator ResumeAfterHurt()
     {
         yield return new WaitForSeconds(1.3f); // Adjust based on your hurt animation length
