@@ -154,6 +154,7 @@ public class GameManager : MonoBehaviour
             pauseMenuUI.SetActive(false);
             playerUI.SetActive(false);
             deathScreenUI.SetActive(true);
+            PauseMenu.DisablePauseMenu();
         }
         Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
@@ -196,10 +197,10 @@ public class GameManager : MonoBehaviour
             }
 
             currentHealth = maxHealth;
-            reputation = 0;
             UpdateHealthUI();
             deathScreenUI.SetActive(false);
             playerUI.SetActive(true);
+            PauseMenu.EnablePauseMenu();
             Time.timeScale = 1f; // Resume the game
             Cursor.lockState = CursorLockMode.Locked; // Lock the cursor
             Cursor.visible = false; // Hide the cursor
@@ -229,6 +230,8 @@ public class GameManager : MonoBehaviour
         isScaledUp = false;
         isDestroyed = false;
         bossDefeated = false;
+        reputation = 0;
+        repText.text = "0";
 
         lastCheckpoint = initialSpawn;
         player.transform.position = initialSpawn;

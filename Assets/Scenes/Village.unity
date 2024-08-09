@@ -5060,7 +5060,7 @@ MonoBehaviour:
     sharpen your abilities. You\u2019re going to need it if you\u2019re facing the
     king."
   - "Instead of using click to scale, hit \u2018E\u2019 on the object which makes
-    you pick up the object. The hit \u2018G\u2019 to throw."
+    you pick up the object. Then hit \u2018G\u2019 to throw."
   questAcceptedDialogue:
   - Try it by destroying my shield.
   questDoneDialogue:
@@ -8966,141 +8966,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 254461903}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &257672169
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 257672170}
-  - component: {fileID: 257672172}
-  - component: {fileID: 257672171}
-  m_Layer: 5
-  m_Name: Text (TMP) (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &257672170
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257672169}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 331303473}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 380}
-  m_SizeDelta: {x: 500, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &257672171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257672169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Paused
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3ebe03c703ca66542a9d519dbe0710bb, type: 2}
-  m_sharedMaterial: {fileID: -5537569519047099010, guid: 3ebe03c703ca66542a9d519dbe0710bb,
-    type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 132
-  m_fontSizeBase: 132
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &257672172
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257672169}
-  m_CullTransparentMesh: 1
 --- !u!1001 &267720592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12139,7 +12004,6 @@ RectTransform:
   - {fileID: 1763423511}
   - {fileID: 1865174092}
   - {fileID: 1233541074}
-  - {fileID: 257672170}
   m_Father: {fileID: 354794911}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -18273,73 +18137,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 563098169}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &568821157 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2783421539155566232, guid: d91018f0da5ef054299d4002313e9e5a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1007693689}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &568821162
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568821157}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2, y: 5, z: 3}
-  m_Center: {x: -1.0000011, y: -0.46316195, z: 2.076831}
---- !u!114 &568821163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568821157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 291ad677d7aa1a44ea8dd1c094179b56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  requiredRep: 100
---- !u!54 &568821164
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568821157}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &570893609
 GameObject:
   m_ObjectHideFlags: 0
@@ -25548,7 +25345,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -315}
+  m_AnchoredPosition: {x: 0, y: -343}
   m_SizeDelta: {x: 1150, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &805000002
@@ -25838,7 +25635,7 @@ PrefabInstance:
     - target: {fileID: 7764815948147301449, guid: 83287f6737312524fa08781c24218d64,
         type: 3}
       propertyPath: m_Convex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8074703690623505886, guid: 83287f6737312524fa08781c24218d64,
         type: 3}
@@ -25903,19 +25700,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5948911040640562098, guid: 83287f6737312524fa08781c24218d64,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2134147981}
-    - targetCorrespondingSourceObject: {fileID: 5948911040640562098, guid: 83287f6737312524fa08781c24218d64,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2134147980}
-    - targetCorrespondingSourceObject: {fileID: 5948911040640562098, guid: 83287f6737312524fa08781c24218d64,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2134147979}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83287f6737312524fa08781c24218d64, type: 3}
 --- !u!4 &818126571 stripped
 Transform:
@@ -30384,9 +30169,10 @@ MonoBehaviour:
   questAudio: {fileID: 8300000, guid: 375ba6a236c8b2145a3cf8ea31a1281f, type: 3}
   noQuestDialogue: []
   questStartDialogue:
-  - The Innkeeper told me about you. Have a quick quest for you.
+  - The Innkeeper told me about you. I have a quick quest for you.
   - "I want to go mining but one of the guards threw my pickaxe up the wall. I\u2019ve
-    been trying to get up there but they keep stopping me."
+    been trying to get up there but they keep stopping me. It's around the scaffolding
+    I built."
   questAcceptedDialogue:
   - Find my pickaxe and give it back to me.
   questDoneDialogue:
@@ -32605,7 +32391,7 @@ PrefabInstance:
     - target: {fileID: 5074704195503006994, guid: d91018f0da5ef054299d4002313e9e5a,
         type: 3}
       propertyPath: m_Convex
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5439427458115822781, guid: d91018f0da5ef054299d4002313e9e5a,
         type: 3}
@@ -32675,19 +32461,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2783421539155566232, guid: d91018f0da5ef054299d4002313e9e5a,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 568821164}
-    - targetCorrespondingSourceObject: {fileID: 2783421539155566232, guid: d91018f0da5ef054299d4002313e9e5a,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 568821163}
-    - targetCorrespondingSourceObject: {fileID: 2783421539155566232, guid: d91018f0da5ef054299d4002313e9e5a,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 568821162}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d91018f0da5ef054299d4002313e9e5a, type: 3}
 --- !u!4 &1007693690 stripped
 Transform:
@@ -32868,6 +32642,175 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1012903133}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1018171335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1018171339}
+  - component: {fileID: 1018171338}
+  - component: {fileID: 1018171337}
+  - component: {fileID: 1018171336}
+  - component: {fileID: 1018171342}
+  - component: {fileID: 1018171341}
+  - component: {fileID: 1018171340}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1018171336
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018171335}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1018171337
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018171335}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1018171338
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018171335}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1018171339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018171335}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 354.52, y: 2.33, z: 486.45}
+  m_LocalScale: {x: 3.7955, y: 4.2247, z: 0.58316}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1018171340
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018171335}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &1018171341
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018171335}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.9999999, z: 4.297796}
+  m_Center: {x: 0, y: 0, z: -1.6488966}
+--- !u!114 &1018171342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018171335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 291ad677d7aa1a44ea8dd1c094179b56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredRep: 100
 --- !u!1001 &1022216352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47155,7 +47098,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1233541074
 RectTransform:
   m_ObjectHideFlags: 0
@@ -60003,16 +59946,17 @@ MonoBehaviour:
   - Hello! I have heard about you. A wizard wandering town to town, helping its people.
     Perks of being an innkeeper - weary travellers telling bizarre stories.
   - I guess you heard about our oppressive king who rules with such an iron fist.
-    Well I certainly would like to not trouble you, there is something you have to
-    do beforehand.
+    Well I certainly would like to not trouble you, but there is something you have
+    to do beforehand.
   - You see you have to prove yourself, Wizard. Help me and I will spread word of
     your well-mannered intentions, even though everybody throughout the land despises
     him.
   - The ladder to the second storey is broken and the supplies I need are in my room
     which you can probably guess requires the ladder. I left my door open so all
     you have to do is get up there.
-  - "Use magical forced perspective abilities I've heard so much about. Use the things
-    in the inn to use as platforms don\u2019t worry about the mess. "
+  - "Use your magical forced perspective abilities I've heard so much about (click
+    on an object to scale). Use the things in the inn to use as platforms don\u2019t
+    worry about the mess. "
   questAcceptedDialogue:
   - Come back when you have the supplies! I await your return.
   questDoneDialogue:
@@ -60020,10 +59964,10 @@ MonoBehaviour:
     souls that require your assistance. Help them all out and then and only then
     can you enter the castle.
   - Until then the guards will be hostile so avoid them at all costs. If you do get
-    seen, hide in the houses and hide. I suggest going to the Leader of the Knights.
+    seen, head to the houses and hide. I suggest going to the Leader of the Knights.
     She can teach you how to defend yourself.
-  - "If you get injured or need a place to rest, use the fireplaces throughout town,
-    I\u2019m sure the people won\u2019t mind. See you!"
+  - "If you get injured or need a place to rest and heal, use the fireplaces throughout
+    town, I\u2019m sure the people won\u2019t mind. See you!"
   noQuestAreaMin: {fileID: 131775131}
   noQuestAreaMax: {fileID: 1795208772}
   questDoneAreaMin: {fileID: 2059177110}
@@ -69788,13 +69732,12 @@ MonoBehaviour:
   questDoneDialogue:
   - Ready to keel over from laughter? Here goes nothing.
   - "So the Farmer\u2019s neighbour came to his house and asked to borrow his donkey."
-  - The Farmer said "I'd be happy to, but he's currently on loan to another friend
+  - The Farmer said "I'd be happy to, but it's currently on loan to another friend
     of mine."
   - "Just then, they heard the donkey bray from behind the Farmer\u2019s house."
   - '"But I can hear him at your house." said the neighbour.'
-  - '"But I can hear him at your house." said the neighbour.'
-  - The farmer retorted, "I can't believe you'd take a donkey's word over mine.
-  - Thank you Wizard. You have my respect and blessing.
+  - The farmer retorted, "I can't believe you'd take a donkey's word over mine!
+  - Isn't that hilarious? Thank you Wizard. You have my respect and blessing.
   noQuestAreaMin: {fileID: 1218349413}
   noQuestAreaMax: {fileID: 502427271}
   questDoneAreaMin: {fileID: 2134166319}
@@ -78748,73 +78691,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2128622276}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2134147974 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5948911040640562098, guid: 83287f6737312524fa08781c24218d64,
-    type: 3}
-  m_PrefabInstance: {fileID: 818126570}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &2134147979
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2134147974}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2, y: 5, z: 3}
-  m_Center: {x: 0.99999833, y: -0.46316195, z: 2.3488038}
---- !u!54 &2134147980
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2134147974}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &2134147981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2134147974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 291ad677d7aa1a44ea8dd1c094179b56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  requiredRep: 100
 --- !u!1 &2134166318
 GameObject:
   m_ObjectHideFlags: 0
@@ -80427,3 +80303,4 @@ SceneRoots:
   - {fileID: 526844989}
   - {fileID: 1305008409}
   - {fileID: 768330510}
+  - {fileID: 1018171339}

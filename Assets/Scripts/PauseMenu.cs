@@ -17,6 +17,11 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
 
     /// <summary>
+    /// bool to check if can pause
+    /// </summary>
+    private static bool canPause = true;
+
+    /// <summary>
     /// Reference to different UI panels, sliders and game manager
     /// </summary>
     public GameObject pauseMenuUI;
@@ -31,7 +36,7 @@ public class PauseMenu : MonoBehaviour
     void Update()
     {
         // Check for the Escape key press to toggle pause
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && canPause)
         {
             if (GameIsPaused)
             {
@@ -129,5 +134,21 @@ public class PauseMenu : MonoBehaviour
     public void OnSFXSliderChanged(float value)
     {
         AudioManager.instance.SetSFXVolume(value);
+    }
+
+    /// <summary>
+    /// function to disable pause
+    /// </summary>
+    public static void DisablePauseMenu()
+    {
+        canPause = false;
+    }
+
+    /// <summary>
+    /// function to enable pause
+    /// </summary>
+    public static void EnablePauseMenu()
+    {
+        canPause = true;
     }
 }
